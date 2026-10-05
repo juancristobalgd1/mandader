@@ -1,0 +1,991 @@
+{
+ "tiendas": [
+  {
+   "id": "super-valle",
+   "nombre": "Súper del Valle",
+   "categoria": "super",
+   "emoji": "🛒",
+   "color": "#2f9e6e",
+   "zona": "Elgoibar centro",
+   "tiempoMin": 35,
+   "abre": "08:30",
+   "cierra": "21:30",
+   "valoracion": 4.6
+  },
+  {
+   "id": "farmacia-plaza",
+   "nombre": "Farmacia de la Plaza",
+   "categoria": "farmacia",
+   "emoji": "💊",
+   "color": "#2e8fd1",
+   "zona": "Elgoibar centro",
+   "tiempoMin": 30,
+   "abre": "09:00",
+   "cierra": "21:00",
+   "valoracion": 4.8
+  },
+  {
+   "id": "pizzeria-txoko",
+   "nombre": "Pizzería Txoko",
+   "categoria": "comida",
+   "emoji": "🍕",
+   "color": "#d9482b",
+   "zona": "Elgoibar",
+   "tiempoMin": 40,
+   "abre": "12:30",
+   "cierra": "23:30",
+   "valoracion": 4.7
+  },
+  {
+   "id": "burger-deba",
+   "nombre": "Burger Deba",
+   "categoria": "comida",
+   "emoji": "🍔",
+   "color": "#c97a1a",
+   "zona": "Eibar",
+   "tiempoMin": 45,
+   "abre": "12:30",
+   "cierra": "23:59",
+   "valoracion": 4.5
+  },
+  {
+   "id": "sushi-kai",
+   "nombre": "Sushi Kai",
+   "categoria": "comida",
+   "emoji": "🍣",
+   "color": "#b8325f",
+   "zona": "Eibar",
+   "tiempoMin": 50,
+   "abre": "13:00",
+   "cierra": "23:00",
+   "valoracion": 4.6
+  },
+  {
+   "id": "panaderia-goxua",
+   "nombre": "Panadería Goxua",
+   "categoria": "panaderia",
+   "emoji": "🥖",
+   "color": "#b88a3a",
+   "zona": "Elgoibar",
+   "tiempoMin": 25,
+   "abre": "07:00",
+   "cierra": "14:30",
+   "valoracion": 4.9
+  },
+  {
+   "id": "fruteria-baserri",
+   "nombre": "Frutería Baserri",
+   "categoria": "fruteria",
+   "emoji": "🍎",
+   "color": "#5aa832",
+   "zona": "Elgoibar",
+   "tiempoMin": 30,
+   "abre": "08:30",
+   "cierra": "20:30",
+   "valoracion": 4.7
+  },
+  {
+   "id": "bebidas-24",
+   "nombre": "Bebidas 24",
+   "categoria": "bebidas",
+   "emoji": "🥤",
+   "color": "#6c4fd6",
+   "zona": "Eibar",
+   "tiempoMin": 35,
+   "abre": "10:00",
+   "cierra": "23:59",
+   "valoracion": 4.3
+  },
+  {
+   "id": "bazar-amano",
+   "nombre": "Bazar A Mano",
+   "categoria": "hogar",
+   "emoji": "🧰",
+   "color": "#7a7f86",
+   "zona": "Elgoibar",
+   "tiempoMin": 40,
+   "abre": "09:30",
+   "cierra": "20:30",
+   "valoracion": 4.4
+  }
+ ],
+ "productos": [
+  {
+   "id": "super-valle-1",
+   "tiendaId": "super-valle",
+   "nombre": "Leche entera 1 L",
+   "desc": "Brik de leche entera de vaca.",
+   "precio": 1.05,
+   "emoji": "🥛",
+   "categoria": "super",
+   "tags": [
+    "leche",
+    "lacteos",
+    "desayuno"
+   ],
+   "popular": true
+  },
+  {
+   "id": "super-valle-2",
+   "tiendaId": "super-valle",
+   "nombre": "Leche sin lactosa 1 L",
+   "desc": "Leche semidesnatada sin lactosa.",
+   "precio": 1.29,
+   "emoji": "🥛",
+   "categoria": "super",
+   "tags": [
+    "leche",
+    "sin lactosa",
+    "lacteos",
+    "desayuno"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-3",
+   "tiendaId": "super-valle",
+   "nombre": "Huevos camperos (12)",
+   "desc": "Docena de huevos camperos talla L.",
+   "precio": 3.2,
+   "emoji": "🥚",
+   "categoria": "super",
+   "tags": [
+    "huevos",
+    "desayuno"
+   ],
+   "popular": true
+  },
+  {
+   "id": "super-valle-4",
+   "tiendaId": "super-valle",
+   "nombre": "Pan de molde integral",
+   "desc": "Pan de molde integral, 500 g.",
+   "precio": 1.85,
+   "emoji": "🍞",
+   "categoria": "super",
+   "tags": [
+    "pan",
+    "integral",
+    "desayuno"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-5",
+   "tiendaId": "super-valle",
+   "nombre": "Aceite de oliva virgen extra 1 L",
+   "desc": "AOVE de primera presión en frío.",
+   "precio": 8.9,
+   "emoji": "🫒",
+   "categoria": "super",
+   "tags": [
+    "aceite",
+    "despensa"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-6",
+   "tiendaId": "super-valle",
+   "nombre": "Arroz redondo 1 kg",
+   "desc": "Arroz redondo, ideal para paella.",
+   "precio": 1.6,
+   "emoji": "🍚",
+   "categoria": "super",
+   "tags": [
+    "arroz",
+    "despensa"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-7",
+   "tiendaId": "super-valle",
+   "nombre": "Pasta espagueti 500 g",
+   "desc": "Espagueti de trigo duro.",
+   "precio": 0.95,
+   "emoji": "🍝",
+   "categoria": "super",
+   "tags": [
+    "pasta",
+    "despensa"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-8",
+   "tiendaId": "super-valle",
+   "nombre": "Tomate frito 400 g",
+   "desc": "Tomate frito tradicional.",
+   "precio": 1.1,
+   "emoji": "🥫",
+   "categoria": "super",
+   "tags": [
+    "tomate",
+    "salsa",
+    "despensa"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-9",
+   "tiendaId": "super-valle",
+   "nombre": "Café molido 250 g",
+   "desc": "Café molido natural, tueste medio.",
+   "precio": 3.45,
+   "emoji": "☕",
+   "categoria": "super",
+   "tags": [
+    "cafe",
+    "desayuno"
+   ],
+   "popular": true
+  },
+  {
+   "id": "super-valle-10",
+   "tiendaId": "super-valle",
+   "nombre": "Yogur natural (pack 6)",
+   "desc": "Yogur natural sin azúcar.",
+   "precio": 1.75,
+   "emoji": "🥣",
+   "categoria": "super",
+   "tags": [
+    "yogur",
+    "lacteos",
+    "sin azucar"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-11",
+   "tiendaId": "super-valle",
+   "nombre": "Pollo entero",
+   "desc": "Pollo entero de corral, aprox. 1,6 kg.",
+   "precio": 6.9,
+   "emoji": "🍗",
+   "categoria": "super",
+   "tags": [
+    "pollo",
+    "carne"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-12",
+   "tiendaId": "super-valle",
+   "nombre": "Papel higiénico (12 rollos)",
+   "desc": "Doble capa, 12 rollos.",
+   "precio": 4.95,
+   "emoji": "🧻",
+   "categoria": "super",
+   "tags": [
+    "papel",
+    "higiene",
+    "hogar"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-13",
+   "tiendaId": "super-valle",
+   "nombre": "Detergente líquido 30 lavados",
+   "desc": "Detergente para ropa, 30 lavados.",
+   "precio": 6.5,
+   "emoji": "🧴",
+   "categoria": "super",
+   "tags": [
+    "detergente",
+    "limpieza",
+    "hogar"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-14",
+   "tiendaId": "super-valle",
+   "nombre": "Pan sin gluten",
+   "desc": "Pan de molde sin gluten, 400 g.",
+   "precio": 3.1,
+   "emoji": "🍞",
+   "categoria": "super",
+   "tags": [
+    "pan",
+    "sin gluten"
+   ],
+   "popular": false
+  },
+  {
+   "id": "super-valle-15",
+   "tiendaId": "super-valle",
+   "nombre": "Hamburguesa vegana (2)",
+   "desc": "Dos hamburguesas vegetales.",
+   "precio": 3.6,
+   "emoji": "🌱",
+   "categoria": "super",
+   "tags": [
+    "vegano",
+    "vegetariano",
+    "hamburguesa"
+   ],
+   "popular": false
+  },
+  {
+   "id": "farmacia-plaza-1",
+   "tiendaId": "farmacia-plaza",
+   "nombre": "Paracetamol 1 g (40 comp.)",
+   "desc": "Medicamento sin receta. Lee el prospecto.",
+   "precio": 2.5,
+   "emoji": "💊",
+   "categoria": "farmacia",
+   "tags": [
+    "paracetamol",
+    "dolor",
+    "fiebre"
+   ],
+   "popular": true
+  },
+  {
+   "id": "farmacia-plaza-2",
+   "tiendaId": "farmacia-plaza",
+   "nombre": "Ibuprofeno 400 mg (20 comp.)",
+   "desc": "Medicamento sin receta. Lee el prospecto.",
+   "precio": 2.8,
+   "emoji": "💊",
+   "categoria": "farmacia",
+   "tags": [
+    "ibuprofeno",
+    "dolor",
+    "inflamacion"
+   ],
+   "popular": false
+  },
+  {
+   "id": "farmacia-plaza-3",
+   "tiendaId": "farmacia-plaza",
+   "nombre": "Crema solar SPF 50",
+   "desc": "Protección muy alta, 200 ml.",
+   "precio": 14.9,
+   "emoji": "🧴",
+   "categoria": "farmacia",
+   "tags": [
+    "solar",
+    "piel"
+   ],
+   "popular": false
+  },
+  {
+   "id": "farmacia-plaza-4",
+   "tiendaId": "farmacia-plaza",
+   "nombre": "Tiritas surtidas (40)",
+   "desc": "Apósitos de varios tamaños.",
+   "precio": 3.2,
+   "emoji": "🩹",
+   "categoria": "farmacia",
+   "tags": [
+    "tiritas",
+    "botiquin"
+   ],
+   "popular": false
+  },
+  {
+   "id": "farmacia-plaza-5",
+   "tiendaId": "farmacia-plaza",
+   "nombre": "Mascarillas FFP2 (10)",
+   "desc": "Mascarillas FFP2 homologadas.",
+   "precio": 4.5,
+   "emoji": "😷",
+   "categoria": "farmacia",
+   "tags": [
+    "mascarillas"
+   ],
+   "popular": false
+  },
+  {
+   "id": "farmacia-plaza-6",
+   "tiendaId": "farmacia-plaza",
+   "nombre": "Pañales talla 4 (44)",
+   "desc": "Pañales de 7 a 14 kg.",
+   "precio": 13.9,
+   "emoji": "👶",
+   "categoria": "farmacia",
+   "tags": [
+    "bebe",
+    "panales"
+   ],
+   "popular": false
+  },
+  {
+   "id": "farmacia-plaza-7",
+   "tiendaId": "farmacia-plaza",
+   "nombre": "Test de embarazo",
+   "desc": "Resultado en 3 minutos.",
+   "precio": 8.95,
+   "emoji": "🧪",
+   "categoria": "farmacia",
+   "tags": [
+    "test"
+   ],
+   "popular": false
+  },
+  {
+   "id": "pizzeria-txoko-1",
+   "tiendaId": "pizzeria-txoko",
+   "nombre": "Pizza margarita",
+   "desc": "Tomate, mozzarella fior di latte y albahaca.",
+   "precio": 9.5,
+   "emoji": "🍕",
+   "categoria": "comida",
+   "tags": [
+    "pizza",
+    "vegetariano",
+    "cena"
+   ],
+   "popular": true
+  },
+  {
+   "id": "pizzeria-txoko-2",
+   "tiendaId": "pizzeria-txoko",
+   "nombre": "Pizza barbacoa",
+   "desc": "Carne picada, bacon, cebolla y salsa barbacoa.",
+   "precio": 12.5,
+   "emoji": "🍕",
+   "categoria": "comida",
+   "tags": [
+    "pizza",
+    "carne",
+    "cena"
+   ],
+   "popular": true
+  },
+  {
+   "id": "pizzeria-txoko-3",
+   "tiendaId": "pizzeria-txoko",
+   "nombre": "Pizza cuatro quesos",
+   "desc": "Mozzarella, gorgonzola, idiazabal y parmesano.",
+   "precio": 11.9,
+   "emoji": "🍕",
+   "categoria": "comida",
+   "tags": [
+    "pizza",
+    "queso",
+    "vegetariano",
+    "cena"
+   ],
+   "popular": false
+  },
+  {
+   "id": "pizzeria-txoko-4",
+   "tiendaId": "pizzeria-txoko",
+   "nombre": "Pizza vegana de verduras",
+   "desc": "Verduras asadas, sin queso.",
+   "precio": 11.5,
+   "emoji": "🍕",
+   "categoria": "comida",
+   "tags": [
+    "pizza",
+    "vegano",
+    "vegetariano",
+    "cena"
+   ],
+   "popular": false
+  },
+  {
+   "id": "pizzeria-txoko-5",
+   "tiendaId": "pizzeria-txoko",
+   "nombre": "Lasaña boloñesa",
+   "desc": "Lasaña casera al horno.",
+   "precio": 10.9,
+   "emoji": "🍝",
+   "categoria": "comida",
+   "tags": [
+    "pasta",
+    "carne",
+    "cena"
+   ],
+   "popular": false
+  },
+  {
+   "id": "pizzeria-txoko-6",
+   "tiendaId": "pizzeria-txoko",
+   "nombre": "Tiramisú",
+   "desc": "Tiramisú casero.",
+   "precio": 4.9,
+   "emoji": "🍰",
+   "categoria": "comida",
+   "tags": [
+    "postre",
+    "dulce"
+   ],
+   "popular": false
+  },
+  {
+   "id": "burger-deba-1",
+   "tiendaId": "burger-deba",
+   "nombre": "Hamburguesa clásica",
+   "desc": "Ternera 180 g, queso cheddar, lechuga, tomate.",
+   "precio": 10.5,
+   "emoji": "🍔",
+   "categoria": "comida",
+   "tags": [
+    "hamburguesa",
+    "carne",
+    "cena"
+   ],
+   "popular": true
+  },
+  {
+   "id": "burger-deba-2",
+   "tiendaId": "burger-deba",
+   "nombre": "Hamburguesa doble bacon",
+   "desc": "Doble carne, doble cheddar y bacon crujiente.",
+   "precio": 13.9,
+   "emoji": "🍔",
+   "categoria": "comida",
+   "tags": [
+    "hamburguesa",
+    "carne",
+    "cena"
+   ],
+   "popular": false
+  },
+  {
+   "id": "burger-deba-3",
+   "tiendaId": "burger-deba",
+   "nombre": "Hamburguesa vegana",
+   "desc": "Burger vegetal con guacamole.",
+   "precio": 11.5,
+   "emoji": "🌱",
+   "categoria": "comida",
+   "tags": [
+    "hamburguesa",
+    "vegano",
+    "vegetariano",
+    "cena"
+   ],
+   "popular": false
+  },
+  {
+   "id": "burger-deba-4",
+   "tiendaId": "burger-deba",
+   "nombre": "Patatas fritas",
+   "desc": "Ración de patatas caseras.",
+   "precio": 3.5,
+   "emoji": "🍟",
+   "categoria": "comida",
+   "tags": [
+    "patatas",
+    "vegano",
+    "entrante"
+   ],
+   "popular": true
+  },
+  {
+   "id": "burger-deba-5",
+   "tiendaId": "burger-deba",
+   "nombre": "Alitas de pollo (8)",
+   "desc": "Alitas con salsa barbacoa.",
+   "precio": 8.5,
+   "emoji": "🍗",
+   "categoria": "comida",
+   "tags": [
+    "pollo",
+    "entrante"
+   ],
+   "popular": false
+  },
+  {
+   "id": "burger-deba-6",
+   "tiendaId": "burger-deba",
+   "nombre": "Batido de chocolate",
+   "desc": "Batido cremoso.",
+   "precio": 4.2,
+   "emoji": "🥤",
+   "categoria": "comida",
+   "tags": [
+    "batido",
+    "dulce",
+    "bebida"
+   ],
+   "popular": false
+  },
+  {
+   "id": "sushi-kai-1",
+   "tiendaId": "sushi-kai",
+   "nombre": "Combo sushi 24 piezas",
+   "desc": "Nigiris, makis y uramakis variados.",
+   "precio": 22.9,
+   "emoji": "🍣",
+   "categoria": "comida",
+   "tags": [
+    "sushi",
+    "japones",
+    "pescado",
+    "cena"
+   ],
+   "popular": true
+  },
+  {
+   "id": "sushi-kai-2",
+   "tiendaId": "sushi-kai",
+   "nombre": "Uramaki California (8)",
+   "desc": "Surimi, aguacate y pepino.",
+   "precio": 8.9,
+   "emoji": "🍣",
+   "categoria": "comida",
+   "tags": [
+    "sushi",
+    "japones"
+   ],
+   "popular": false
+  },
+  {
+   "id": "sushi-kai-3",
+   "tiendaId": "sushi-kai",
+   "nombre": "Ramen de cerdo",
+   "desc": "Caldo tonkotsu, chashu y huevo.",
+   "precio": 12.5,
+   "emoji": "🍜",
+   "categoria": "comida",
+   "tags": [
+    "ramen",
+    "japones",
+    "cena"
+   ],
+   "popular": false
+  },
+  {
+   "id": "sushi-kai-4",
+   "tiendaId": "sushi-kai",
+   "nombre": "Gyozas de verdura (6)",
+   "desc": "A la plancha con salsa ponzu.",
+   "precio": 6.5,
+   "emoji": "🥟",
+   "categoria": "comida",
+   "tags": [
+    "gyozas",
+    "vegano",
+    "vegetariano",
+    "japones",
+    "entrante"
+   ],
+   "popular": false
+  },
+  {
+   "id": "sushi-kai-5",
+   "tiendaId": "sushi-kai",
+   "nombre": "Poke de salmón",
+   "desc": "Arroz, salmón, aguacate y edamame.",
+   "precio": 13.5,
+   "emoji": "🥗",
+   "categoria": "comida",
+   "tags": [
+    "poke",
+    "pescado",
+    "saludable"
+   ],
+   "popular": false
+  },
+  {
+   "id": "panaderia-goxua-1",
+   "tiendaId": "panaderia-goxua",
+   "nombre": "Barra de pan",
+   "desc": "Barra recién horneada.",
+   "precio": 1.1,
+   "emoji": "🥖",
+   "categoria": "panaderia",
+   "tags": [
+    "pan",
+    "desayuno"
+   ],
+   "popular": true
+  },
+  {
+   "id": "panaderia-goxua-2",
+   "tiendaId": "panaderia-goxua",
+   "nombre": "Croissant de mantequilla",
+   "desc": "Croissant artesano.",
+   "precio": 1.4,
+   "emoji": "🥐",
+   "categoria": "panaderia",
+   "tags": [
+    "bolleria",
+    "desayuno",
+    "dulce"
+   ],
+   "popular": true
+  },
+  {
+   "id": "panaderia-goxua-3",
+   "tiendaId": "panaderia-goxua",
+   "nombre": "Pastel vasco",
+   "desc": "Pastel vasco de crema, 6 raciones.",
+   "precio": 14.0,
+   "emoji": "🥧",
+   "categoria": "panaderia",
+   "tags": [
+    "postre",
+    "dulce",
+    "tarta"
+   ],
+   "popular": false
+  },
+  {
+   "id": "panaderia-goxua-4",
+   "tiendaId": "panaderia-goxua",
+   "nombre": "Hogaza de masa madre",
+   "desc": "Pan de masa madre, 750 g.",
+   "precio": 3.9,
+   "emoji": "🍞",
+   "categoria": "panaderia",
+   "tags": [
+    "pan"
+   ],
+   "popular": false
+  },
+  {
+   "id": "panaderia-goxua-5",
+   "tiendaId": "panaderia-goxua",
+   "nombre": "Napolitana de chocolate",
+   "desc": "Napolitana rellena de chocolate.",
+   "precio": 1.6,
+   "emoji": "🍫",
+   "categoria": "panaderia",
+   "tags": [
+    "bolleria",
+    "desayuno",
+    "dulce"
+   ],
+   "popular": false
+  },
+  {
+   "id": "fruteria-baserri-1",
+   "tiendaId": "fruteria-baserri",
+   "nombre": "Plátanos de Canarias 1 kg",
+   "desc": "Plátano de Canarias IGP.",
+   "precio": 2.4,
+   "emoji": "🍌",
+   "categoria": "fruteria",
+   "tags": [
+    "fruta",
+    "platano"
+   ],
+   "popular": true
+  },
+  {
+   "id": "fruteria-baserri-2",
+   "tiendaId": "fruteria-baserri",
+   "nombre": "Manzanas reineta 1 kg",
+   "desc": "Manzana reineta del país.",
+   "precio": 2.6,
+   "emoji": "🍎",
+   "categoria": "fruteria",
+   "tags": [
+    "fruta",
+    "manzana"
+   ],
+   "popular": false
+  },
+  {
+   "id": "fruteria-baserri-3",
+   "tiendaId": "fruteria-baserri",
+   "nombre": "Tomates de caserío 1 kg",
+   "desc": "Tomate de temporada.",
+   "precio": 3.2,
+   "emoji": "🍅",
+   "categoria": "fruteria",
+   "tags": [
+    "verdura",
+    "tomate",
+    "ensalada"
+   ],
+   "popular": false
+  },
+  {
+   "id": "fruteria-baserri-4",
+   "tiendaId": "fruteria-baserri",
+   "nombre": "Aguacates (2)",
+   "desc": "Aguacates listos para comer.",
+   "precio": 2.9,
+   "emoji": "🥑",
+   "categoria": "fruteria",
+   "tags": [
+    "fruta",
+    "aguacate",
+    "saludable"
+   ],
+   "popular": false
+  },
+  {
+   "id": "fruteria-baserri-5",
+   "tiendaId": "fruteria-baserri",
+   "nombre": "Patatas 3 kg",
+   "desc": "Patata de Álava.",
+   "precio": 3.5,
+   "emoji": "🥔",
+   "categoria": "fruteria",
+   "tags": [
+    "verdura",
+    "patatas"
+   ],
+   "popular": false
+  },
+  {
+   "id": "fruteria-baserri-6",
+   "tiendaId": "fruteria-baserri",
+   "nombre": "Lechuga",
+   "desc": "Lechuga de caserío.",
+   "precio": 1.2,
+   "emoji": "🥬",
+   "categoria": "fruteria",
+   "tags": [
+    "verdura",
+    "ensalada"
+   ],
+   "popular": false
+  },
+  {
+   "id": "bebidas-24-1",
+   "tiendaId": "bebidas-24",
+   "nombre": "Agua mineral 6 x 1,5 L",
+   "desc": "Pack de agua mineral natural.",
+   "precio": 2.7,
+   "emoji": "💧",
+   "categoria": "bebidas",
+   "tags": [
+    "agua",
+    "bebida"
+   ],
+   "popular": true
+  },
+  {
+   "id": "bebidas-24-2",
+   "tiendaId": "bebidas-24",
+   "nombre": "Refresco de cola 2 L",
+   "desc": "Refresco de cola.",
+   "precio": 2.1,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "refresco",
+    "bebida"
+   ],
+   "popular": false
+  },
+  {
+   "id": "bebidas-24-3",
+   "tiendaId": "bebidas-24",
+   "nombre": "Cerveza (pack 6)",
+   "desc": "Cerveza lager, 6 latas. Solo mayores de 18.",
+   "precio": 5.4,
+   "emoji": "🍺",
+   "categoria": "bebidas",
+   "tags": [
+    "cerveza",
+    "alcohol",
+    "bebida",
+    "+18"
+   ],
+   "popular": false
+  },
+  {
+   "id": "bebidas-24-4",
+   "tiendaId": "bebidas-24",
+   "nombre": "Sidra natural 70 cl",
+   "desc": "Sidra natural de Gipuzkoa. Solo mayores de 18.",
+   "precio": 3.2,
+   "emoji": "🍏",
+   "categoria": "bebidas",
+   "tags": [
+    "sidra",
+    "alcohol",
+    "bebida",
+    "+18"
+   ],
+   "popular": false
+  },
+  {
+   "id": "bebidas-24-5",
+   "tiendaId": "bebidas-24",
+   "nombre": "Hielo 2 kg",
+   "desc": "Bolsa de cubitos.",
+   "precio": 1.8,
+   "emoji": "🧊",
+   "categoria": "bebidas",
+   "tags": [
+    "hielo"
+   ],
+   "popular": false
+  },
+  {
+   "id": "bazar-amano-1",
+   "tiendaId": "bazar-amano",
+   "nombre": "Pilas AA (8)",
+   "desc": "Pilas alcalinas.",
+   "precio": 4.9,
+   "emoji": "🔋",
+   "categoria": "hogar",
+   "tags": [
+    "pilas",
+    "hogar"
+   ],
+   "popular": false
+  },
+  {
+   "id": "bazar-amano-2",
+   "tiendaId": "bazar-amano",
+   "nombre": "Bombilla LED E27",
+   "desc": "Equivale a 60 W, luz cálida.",
+   "precio": 3.5,
+   "emoji": "💡",
+   "categoria": "hogar",
+   "tags": [
+    "bombilla",
+    "hogar"
+   ],
+   "popular": false
+  },
+  {
+   "id": "bazar-amano-3",
+   "tiendaId": "bazar-amano",
+   "nombre": "Cargador USB-C",
+   "desc": "Cargador rápido 20 W.",
+   "precio": 9.9,
+   "emoji": "🔌",
+   "categoria": "hogar",
+   "tags": [
+    "cargador",
+    "movil"
+   ],
+   "popular": false
+  },
+  {
+   "id": "bazar-amano-4",
+   "tiendaId": "bazar-amano",
+   "nombre": "Bolsas de basura (30)",
+   "desc": "Bolsas de 30 L con cierre.",
+   "precio": 2.2,
+   "emoji": "🗑️",
+   "categoria": "hogar",
+   "tags": [
+    "basura",
+    "limpieza",
+    "hogar"
+   ],
+   "popular": false
+  },
+  {
+   "id": "bazar-amano-5",
+   "tiendaId": "bazar-amano",
+   "nombre": "Cinta americana",
+   "desc": "Rollo de 25 m.",
+   "precio": 3.9,
+   "emoji": "🧰",
+   "categoria": "hogar",
+   "tags": [
+    "herramientas",
+    "hogar"
+   ],
+   "popular": false
+  }
+ ]
+}

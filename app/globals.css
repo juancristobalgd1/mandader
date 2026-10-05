@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { background: #14110f; color: #f4efe9; }
+body { font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+.eyebrow { @apply text-[10px] font-medium uppercase tracking-[0.16em] text-muted; }
+.h-section { @apply font-serif text-[24px] font-semibold leading-tight tracking-tight text-white md:text-4xl; }
+.btn-brand { @apply rounded-full bg-brand-grad px-5 py-2.5 text-sm font-semibold text-[#2a1204] shadow-[0_0_24px_rgba(255,138,61,.35)] transition hover:brightness-110 disabled:opacity-40; }
+.btn-ghost { @apply rounded-full border border-line bg-surface px-4 py-2 text-sm text-soft transition hover:border-neutral-500 hover:text-white; }
+.chip { @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-line bg-surface px-3 py-1.5 text-xs text-soft transition hover:border-neutral-500 hover:text-white; }
+.panel { @apply rounded-2xl border border-line bg-surface; }
+.input { @apply w-full rounded-xl border border-line bg-card px-3 py-2.5 text-sm text-white outline-none placeholder:text-muted focus:border-brand; }
+.pill-active { background: #ff8a3d; color: #2a1204; }
+@media (max-width: 767px) { body { padding-bottom: 96px; overflow-x: hidden; } }

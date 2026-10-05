@@ -1,0 +1,11 @@
+# systemd: copia a /etc/systemd/system/ y ajusta la ruta. Luego: systemctl enable --now mandader-api
+[Unit]
+Description=mandader API
+After=network.target
+[Service]
+WorkingDirectory=/opt/mandader
+ExecStart=/usr/bin/npx tsx --tsconfig tsconfig.json server/index.ts
+Restart=always
+User=www-data
+[Install]
+WantedBy=multi-user.target
