@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-05T15:20:17.500Z",
+ "actualizado": "2026-10-05T15:29:00.307Z",
  "tiendas": [
   {
    "id": "ahorramas",
@@ -10166,6 +10166,1927 @@
    "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw181e82c6/Assets/00000084103246_C1C1/large/b/9/6/9/b9698e52cf7f629a08627c9eac32dea951994a7a_078741_C1C1.jpg?sw=140&sh=140",
    "marca": "GALLINA BLANCA",
    "fuente": "https://www.ahorramas.com/sofrito-con-tomate-y-cebolla-gallina-blanca-325g-78741.html"
+  },
+  {
+   "id": "ahorramas-2130",
+   "tiendaId": "ahorramas",
+   "nombre": "Leche fresca sin lactosa El Torrejón 1,5l semidesnatada",
+   "desc": "LECHE FRESCA SIN LACTOSA EL TORREJON 1,5L SEMIDESNATADA",
+   "precio": 1.75,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "sin lactosa",
+    "desnatado",
+    "leche"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwcc358ab2/Assets/02130_C1C1/large/8/5/c/9/85c9ceb7117955dcec668b5bc57a9a75d2263728_02130_C1C1.jpg?sw=140&sh=140",
+   "marca": "EL TORREJON",
+   "fuente": "https://www.ahorramas.com/leche-fresca-sin-lactosa-el-torrejon-15l-semidesnatada-2130.html"
+  },
+  {
+   "id": "ahorramas-2864",
+   "tiendaId": "ahorramas",
+   "nombre": "Leche sin lactosa 0,0% MG Asturiana 1l desnatada",
+   "desc": "LECHE SIN LACTOSA ASTURIANA 1L 0,0% MATERIA GRASA DESNATADA",
+   "precio": 1.28,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "sin lactosa",
+    "desnatado",
+    "leche"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwbf18e3de/Assets/08410297115349_C1C1/large/2/5/7/5/25758309ef7a6bf81ae70e4cf0241878a467cfbb_08410297115349_C1C1.jpg?sw=140&sh=140",
+   "marca": "ASTURIANA",
+   "fuente": "https://www.ahorramas.com/leche-sin-lactosa-00-mg-asturiana-1l-desnatada-2864.html"
+  },
+  {
+   "id": "ahorramas-25953",
+   "tiendaId": "ahorramas",
+   "nombre": "Leche sin lactosa Asturiana 1l semidesnata",
+   "desc": "LECHE SIN LACTOSA ASTURIANA 1L SEMIDESNATA",
+   "precio": 1.34,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "sin lactosa",
+    "leche"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw218cfd4f/Assets/08410297115318_C1C1/large/6/3/c/4/63c4d6b3852b0ced7cbb91c100814e3e6d9fb1a8_08410297115318_C1C1.jpg?sw=140&sh=140",
+   "marca": "ASTURIANA",
+   "fuente": "https://www.ahorramas.com/leche-sin-lactosa-asturiana-1l-semidesnata-25953.html"
+  },
+  {
+   "id": "ahorramas-26806",
+   "tiendaId": "ahorramas",
+   "nombre": "Leche sin lactosa Pascual 1l entera",
+   "desc": "LECHE SIN LACTOSA PASCUAL 1L ENTERA",
+   "precio": 1.59,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "sin lactosa",
+    "leche"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwd67ea87a/Assets/026806_C1C1/large/0/6/a/6/06a6d1e479422460abdfe45ecffaaa8488ef1cfc_026806_C1C1.jpg?sw=140&sh=140",
+   "marca": "PASCUAL",
+   "fuente": "https://www.ahorramas.com/leche-sin-lactosa-pascual-1l-entera-26806.html"
+  },
+  {
+   "id": "ahorramas-254",
+   "tiendaId": "ahorramas",
+   "nombre": "Leche evaporada Nestlé Ideal 525g parcialmente desnatada",
+   "desc": "LECHE EVAPORADA BRIK NESTLE IDEAL 525G PARCIALMENTE DESNATADA",
+   "precio": 2.2,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "desnatado",
+    "leche"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw3bf9c5ca/Assets/07613033831317_C1C1/large/6/1/7/d/617d127e6729ac5581e5bdc8a6bbcd866d191313_07613033831317_C1C1.jpg?sw=140&sh=140",
+   "marca": "IDEAL",
+   "fuente": "https://www.ahorramas.com/leche-evaporada-nestle-ideal-525g-parcialmente-desnatada-254.html"
+  },
+  {
+   "id": "ahorramas-5916",
+   "tiendaId": "ahorramas",
+   "nombre": "Leche Asturiana 2,2l entera",
+   "desc": "LECHE ASTURIANA 2,2L ENTERA",
+   "precio": 2.55,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "leche"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwf271de9e/Assets/08410297110979_C1C1/large/d/c/5/f/dc5f50937ff1cb987b69b89fc30542e9660a6a89_08410297110979_C1C1.jpg?sw=140&sh=140",
+   "marca": "ASTURIANA",
+   "fuente": "https://www.ahorramas.com/leche-asturiana-22l-entera-5916.html"
+  },
+  {
+   "id": "ahorramas-2660",
+   "tiendaId": "ahorramas",
+   "nombre": "Huevos de chocolate con sorpresa kinder Joy 3 unidades",
+   "desc": "HUEVO DE CHOCOLATE JOY KINDER 3 UNIDADES",
+   "precio": 4.29,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "chocolates, golosinas y turrones",
+    "chocolatinas"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw7a996afd/Assets/02660_C1C1/large/5/f/5/6/5f56aa614303278293f1a1dc19e97a5e9c98647d_02660_C1C1.jpg?sw=140&sh=140",
+   "marca": "KINDER",
+   "fuente": "https://www.ahorramas.com/huevos-de-chocolate-con-sorpresa-kinder-joy-3-unidades-2660.html"
+  },
+  {
+   "id": "ahorramas-25267",
+   "tiendaId": "ahorramas",
+   "nombre": "Huevos ecológicos Alipende 6u clase l-xl",
+   "desc": "HUEVOS ECOLÓGICOS ALIPENDE 6U CLASE L-XL",
+   "precio": 3.65,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "ecologico",
+    "huevos",
+    "huevos de suelo"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw81f607f7/Assets/025267_C1C1/large/d/f/5/6/df56bab0077993cc86fceab64e8fde055b6e4bbd_025267_C1C1.jpg?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/huevos-ecologicos-alipende-6u-clase-l-xl-25267.html"
+  },
+  {
+   "id": "ahorramas-25268",
+   "tiendaId": "ahorramas",
+   "nombre": "Huevos camperos Alipende 6u \"clase l-xl\"",
+   "desc": "HUEVO CAMPERO ALIPENDE 6U CLASE L-XL",
+   "precio": 2.7,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "huevos",
+    "huevos de suelo"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwd0f06691/Assets/025268_C1C1/large/b/a/3/1/ba3158eb4be307203a28ee00ecd52d9a15a5d6c2_025268_C1C1.jpg?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/huevos-camperos-alipende-6u-clase-l-xl-25268.html"
+  },
+  {
+   "id": "ahorramas-31199",
+   "tiendaId": "ahorramas",
+   "nombre": "Huevos de gallinas criadas con maíz sueltas en el gallinero Alipende 12u \"clase m-l\"",
+   "desc": "HUEVOS DE GALLINAS ALIMENTADAS CON MAÍZ SUELTAS EN EL GALLINERO ALIPENDE 12U \"CLASE M-L\"",
+   "precio": 3.5,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "huevos",
+    "huevos de suelo"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwa60bda3d/Assets/031199_C1C1/large/6/9/5/2/695245f9e65ff55aab6b72933a1723d545883776_031199_C1C1.jpg?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/huevos-de-gallinas-criadas-con-maiz-sueltas-en-el-gallinero-alipende-12u-clase-m-l-31199.html"
+  },
+  {
+   "id": "ahorramas-563",
+   "tiendaId": "ahorramas",
+   "nombre": "Mayonesa sin gluten sin lactosa Ybarra 450ml",
+   "desc": "MAYONESA SIN GLUTEN SIN LACTOSA YBARRA 450ML",
+   "precio": 2.45,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "sin gluten",
+    "sin lactosa",
+    "tomate frito, salsas y especias",
+    "mayonesa"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw6adfb385/Assets/0563_C1C1/large/f/2/4/5/f245e957e36eb37dcad5f4fc97707e6c857ef419_0563_C1C1.jpg?sw=140&sh=140",
+   "marca": "YBARRA",
+   "fuente": "https://www.ahorramas.com/mayonesa-sin-gluten-sin-lactosa-ybarra-450ml-563.html"
+  },
+  {
+   "id": "ahorramas-7830",
+   "tiendaId": "ahorramas",
+   "nombre": "Mayonesa Ybarra 750ml",
+   "desc": "MAYONESA YBARRA 750ML",
+   "precio": 3.19,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "tomate frito, salsas y especias",
+    "mayonesa"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwe204534d/Assets/07830_C1C1/large/2/e/0/8/2e08152b024f65d5a3f6e951d76920565c273f60_07830_C1C1.jpg?sw=140&sh=140",
+   "marca": "YBARRA",
+   "fuente": "https://www.ahorramas.com/mayonesa-ybarra-750ml-7830.html"
+  },
+  {
+   "id": "ahorramas-7921",
+   "tiendaId": "ahorramas",
+   "nombre": "Aceite de oliva virgen extra Ybarra 500ml",
+   "desc": "ACEITE DE OLIVA YBARRA 500ML VIRGEN EXTRA",
+   "precio": 3.25,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "aceite, vinagre y sal",
+    "aceites",
+    "aceite de oliva virgen y virgen extra"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw8289e755/Assets/07921_C1C1/large/8/4/2/5/842516799c914e30d66f3594d04b392e2f2aeadc_07921_C1C1.jpg?sw=140&sh=140",
+   "marca": "YBARRA",
+   "fuente": "https://www.ahorramas.com/aceite-de-oliva--virgen-extra-ybarra-500ml-7921.html"
+  },
+  {
+   "id": "ahorramas-11616",
+   "tiendaId": "ahorramas",
+   "nombre": "Barra de espiga plus 300g",
+   "desc": "BARRA DE ESPIGA PLUS 300G",
+   "precio": 0.75,
+   "emoji": "🥖",
+   "categoria": "panaderia",
+   "tags": [
+    "panadería",
+    "pan de horno",
+    "pan de baguette"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw84e9b634/Assets/011616_C1C1/large/9/2/4/3/92431f3e174057af10060a762d5c9bf99e1a9362_011616_C1C1.jpg?sw=140&sh=140",
+   "fuente": "https://www.ahorramas.com/barra-de-espiga-plus-300g-11616.html"
+  },
+  {
+   "id": "ahorramas-346",
+   "tiendaId": "ahorramas",
+   "nombre": "Aceite de oliva virgen extra Abril spray 200ml",
+   "desc": "ACEITE DE OLIVA SPRAY ABRIL 200ML VIRGEN EXTRA",
+   "precio": 2.45,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "aceite, vinagre y sal",
+    "aceites",
+    "aceite de oliva virgen y virgen extra"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw8551f8c7/Assets/0346_C1C1/large/4/f/0/d/4f0d93c941f0ce891c2404b919be0691639372b1_0346_C1C1.jpg?sw=140&sh=140",
+   "marca": "ABRIL",
+   "fuente": "https://www.ahorramas.com/aceite-de-oliva-virgen-extra-abril-spray-200ml-346.html"
+  },
+  {
+   "id": "ahorramas-9423",
+   "tiendaId": "ahorramas",
+   "nombre": "Sardinas Albo 85g en aceite de oliva",
+   "desc": "SARDINAS ALBO 85G EN ACEITE DE OLIVA",
+   "precio": 2.15,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "conservas de pescado",
+    "sardinas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwbdfd35da/Assets/09423_C1C1/large/e/4/c/9/e4c9cea415a94f754ab782953fe11c9115f692e5_09423_C1C1.jpg?sw=140&sh=140",
+   "marca": "ALBO",
+   "fuente": "https://www.ahorramas.com/sardinas-albo-85g-en-aceite-de-oliva-9423.html"
+  },
+  {
+   "id": "ahorramas-38478",
+   "tiendaId": "ahorramas",
+   "nombre": "Aceite de girasol Koipe 1l",
+   "desc": "ACEITE DE GIRASOL KOIPE 1L",
+   "precio": 1.99,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "aceite, vinagre y sal",
+    "aceites",
+    "aceite de girasol"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw18ffa0f1/Assets/038478_C1C1/large/6/2/6/f/626f2cb47d5da9c4f154af7fd908a39bafd64cbd_038478_C1C1.jpg?sw=140&sh=140",
+   "marca": "KOIPESOL",
+   "fuente": "https://www.ahorramas.com/aceite-de-girasol-koipe-1l-38478.html"
+  },
+  {
+   "id": "ahorramas-54069",
+   "tiendaId": "ahorramas",
+   "nombre": "Filete de caballa Alipende pack-2 en aceite de girasol",
+   "desc": "FILETE DE CABALLA ALIPENDE PACK-2 EN ACEITE DE GIRASOL",
+   "precio": 2.6,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "conservas de pescado",
+    "caballa"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwfbef4aeb/Assets/054069_C1C1/large/2/f/8/2/2f82612f5f4632d6af546ca817d0ccf1d1cbc025_054069_C1C1.jpg?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/filete-de-caballa-alipende-pack-2-en-aceite-de-girasol-54069.html"
+  },
+  {
+   "id": "ahorramas-84581",
+   "tiendaId": "ahorramas",
+   "nombre": "Aceite de girasol Alipende 1l",
+   "desc": "ACEITE DE GIRASOL ALIPENDE 1L (ACIDEZ MÁXIMA 0,2º)",
+   "precio": 1.85,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "aceite, vinagre y sal",
+    "aceites",
+    "aceite de girasol"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw19ce7439/Assets/084581_C1C1/large/3/7/1/4/3714ea1f07da0cf8e22a92dd46e392d41d45426b_084581_C1C1.jpg?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/aceite-de-girasol-alipende-1l--84581.html"
+  },
+  {
+   "id": "ahorramas-84582",
+   "tiendaId": "ahorramas",
+   "nombre": "Aceite de girasol Alipende garrafa 5l",
+   "desc": "ACEITE DE GIRASOL ALIPENDE GARRAFA 5L (ACIDEZ MÁXIMA 0,2º)",
+   "precio": 8.6,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "aceite, vinagre y sal",
+    "aceites",
+    "aceite de girasol"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw5204cc4b/Assets/084582_C1C1/large/d/a/0/c/da0c4d208dba6eabc274cbcf4476612ad43a6614_084582_C1C1.jpg?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/aceite-de-girasol-alipende-garrafa-5l-84582.html"
+  },
+  {
+   "id": "ahorramas-42693",
+   "tiendaId": "ahorramas",
+   "nombre": "Agua mineral natural Nestlé Aquarel botella Tapón Sport 750ml",
+   "desc": "AGUA NESTLE AQUAREL 75CL",
+   "precio": 0.75,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "agua"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw9cbded89/Assets/042693_C1C1/large/2/c/9/f/2c9fdb636449276b39c55f31cbff5eb09fc1fc3b_042693_C1C1.jpg?sw=140&sh=140",
+   "marca": "AQUAREL",
+   "fuente": "https://www.ahorramas.com/agua-mineral-natural-nestle-aquarel-botella-tapon-sport-750ml-42693.html"
+  },
+  {
+   "id": "ahorramas-52028",
+   "tiendaId": "ahorramas",
+   "nombre": "Agua mineral natural Nestlé Aquarel botella 1,5 l",
+   "desc": "AGUA AQUAREL NESTLE 1,5L",
+   "precio": 0.48,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "agua"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw1b43e1a3/Assets/052028_C1C1/large/0/7/3/4/07343477286e08da73afe2c77ee53fb612d55fe2_052028_C1C1.jpg?sw=140&sh=140",
+   "marca": "AQUAREL",
+   "fuente": "https://www.ahorramas.com/agua-mineral-natural-nestle-aquarel-botella-15-l-52028.html"
+  },
+  {
+   "id": "ahorramas-2650",
+   "tiendaId": "ahorramas",
+   "nombre": "Petit maxi Danonino pack 4 fresa y plátano",
+   "desc": "PETIT MAXI SIN GLUTEN DANONINO PACK 4 FRESA Y PLATANO",
+   "precio": 2.49,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "yogures y kéfir"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwd373602a/Assets/02650_C1C1/large/c/2/5/6/c25612639f635680a1cdb5944cdbfd619d028dfa_02650_C1C1.jpg?sw=140&sh=140",
+   "marca": "DANONINO",
+   "fuente": "https://www.ahorramas.com/petit-maxi-danonino-pack-4-fresa-y-platano-2650.html"
+  },
+  {
+   "id": "ahorramas-6218",
+   "tiendaId": "ahorramas",
+   "nombre": "Petit Danonino pack 6 fresa y plátano",
+   "desc": "PETIT SIN GLUTEN DANONINO PACK 6 FRESA Y PLATANO",
+   "precio": 1.69,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "yogures y kéfir"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw9cc7a3f4/Assets/06218_C1C1/large/6/6/1/2/6612e67cafd8ee38d6a72ea93935c27e927ca064_06218_C1C1.jpg?sw=140&sh=140",
+   "marca": "DANONINO",
+   "fuente": "https://www.ahorramas.com/petit-danonino-pack-6-fresa-y-platano-6218.html"
+  },
+  {
+   "id": "ahorramas-15050",
+   "tiendaId": "ahorramas",
+   "nombre": "Plátano Canario bandeja",
+   "desc": "PLATANO CANARIO BANDEJA",
+   "precio": 2.99,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "frutas",
+    "plátanos y uvas"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw56d5529c/Assets/015050_C1C1/large/f/5/7/e/f57ef3c69e0b525b6f95ac21f88c4566cf125532_015050_C1C1.jpg?sw=140&sh=140",
+   "fuente": "https://www.ahorramas.com/platano-canario-bandeja-15050.html"
+  },
+  {
+   "id": "ahorramas-16257",
+   "tiendaId": "ahorramas",
+   "nombre": "Yogur Danone pack 8 fresa plátano macedonia tarta queso",
+   "desc": "YOGUR SIN GLUTEN DANONE PACK 8 SABORES FRESA MACEDONIA PLATANO Y TARTA DE QUESO",
+   "precio": 1.99,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "yogures y kéfir"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwca2234f3/Assets/016257_C1C1/large/6/0/6/9/60693c737c476674670e33a4d7a30106f6b5c7ac_016257_C1C1.jpg?sw=140&sh=140",
+   "marca": "DANONE",
+   "fuente": "https://www.ahorramas.com/yogur-danone-pack-8-fresa-platano-macedonia-tarta-queso-16257.html"
+  },
+  {
+   "id": "ahorramas-16744",
+   "tiendaId": "ahorramas",
+   "nombre": "Pipas tostadas con leña Manzanares 360g",
+   "desc": "PIPA SIN GLUTEN MANZANARES 360G TOSTADAS CON LEÑA",
+   "precio": 2.75,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "aperitivos y frutos secos",
+    "frutos secos",
+    "pipas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw19bcf3c1/Assets/016744_C1C1/large/3/f/1/f/3f1f34a0c05b668ca9e48d61bdcc345c4a28bc1f_016744_C1C1.jpg?sw=140&sh=140",
+   "marca": "MANZANARES",
+   "fuente": "https://www.ahorramas.com/pipas-tostadas-con-lena-manzanares-360g-16744.html"
+  },
+  {
+   "id": "ahorramas-29246",
+   "tiendaId": "ahorramas",
+   "nombre": "Compota de manzana Be Plus 4 Unidades",
+   "desc": "COMPOTA SIN AZUCAR AÑADIDO BE PLUS 4U DE MANZANA",
+   "precio": 1.99,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "conservas de frutas",
+    "compota y macedonia"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw97b31fcf/Assets/029246_C1C1/large/d/1/5/a/d15ab06a0648f9f29bb595edf341b581aca5177d_029246_C1C1.jpg?sw=140&sh=140",
+   "marca": "BE PLUS",
+   "fuente": "https://www.ahorramas.com/compota-de-manzana-be-plus-4-unidades-29246.html"
+  },
+  {
+   "id": "ahorramas-7539",
+   "tiendaId": "ahorramas",
+   "nombre": "Mermelada diet la vieja fabrica 290g naranja amarga",
+   "desc": "MERMELADA DIET LA VIEJA FABRICA 290G NARANJA AMARGA",
+   "precio": 2.89,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "miel y mermeladas",
+    "mermelada"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw14523057/Assets/07539_C1C1/large/5/d/c/3/5dc35d223560c0fd3c1b2d3414aa11d8159867b6_07539_C1C1.jpg?sw=140&sh=140",
+   "marca": "LA VIEJA FABRICA",
+   "fuente": "https://www.ahorramas.com/mermelada-diet-la-vieja-fabrica-290g-naranja-amarga-7539.html"
+  },
+  {
+   "id": "ahorramas-8751",
+   "tiendaId": "ahorramas",
+   "nombre": "Refresco sin gas naranja Trina botella 1,5l zero",
+   "desc": "REFRESCO ZERO SIN AZUCAR AÑADIDO TRINA BOTELLA 1,5L DE NARANJA",
+   "precio": 1.75,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "refrescos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwad51b961/Assets/08751_C1C1/large/9/a/0/0/9a0060e0988b39c31c4be9a2b3c32817775156d0_08751_C1C1.jpg?sw=140&sh=140",
+   "marca": "TRINA",
+   "fuente": "https://www.ahorramas.com/refresco-sin-gas-naranja-trina-botella-15l-zero-8751.html"
+  },
+  {
+   "id": "ahorramas-9966",
+   "tiendaId": "ahorramas",
+   "nombre": "Refresco naranja Don Simón 1,5L",
+   "desc": "NARANJADA LIGHT SIN AZÚCAR AÑADIDO DON SIMON BOTELLA 1,5L",
+   "precio": 1.4,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "refrescos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw4117a954/Assets/09966_C1C1/large/9/3/5/e/935e94ea8712ef2645dca7f065ea6673292f6d69_09966_C1C1.jpg?sw=140&sh=140",
+   "marca": "DON SIMON",
+   "fuente": "https://www.ahorramas.com/refresco-naranja-don-simon-15l-9966.html"
+  },
+  {
+   "id": "ahorramas-7911",
+   "tiendaId": "ahorramas",
+   "nombre": "Tortitas de maíz Bicentury 123g tomate y aceite",
+   "desc": "TORTITAS DE MAÍZ BICENTURY 123G TOMATE Y ACEITE",
+   "precio": 2.39,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "productos dietéticos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw602c3571/Assets/07911_C1C1/large/f/6/6/8/f668499014c476f97ea81cfe43229bc813717da6_07911_C1C1.jpg?sw=140&sh=140",
+   "marca": "BICENTURY",
+   "fuente": "https://www.ahorramas.com/tortitas-de-maiz-bicentury-123g-tomate-y-aceite-7911.html"
+  },
+  {
+   "id": "ahorramas-12282",
+   "tiendaId": "ahorramas",
+   "nombre": "Mejillón cocido Aguinamar 900g en tomate",
+   "desc": "MEJILLÓN COCIDO AGUINAMAR 900G EN TOMATE",
+   "precio": 6.75,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "pescado y mariscos",
+    "preparados y elaborados de pescado y marisco"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw066e6318/Assets/012282_EIAh/large/2/3/3/7/233764dabf983b888f99fd7230ff1120a67a7aed_012282_EIAh.jpg?sw=140&sh=140",
+   "marca": "AGUINAMAR",
+   "fuente": "https://www.ahorramas.com/mejillon-cocido-aguinamar-900g-en-tomate-12282.html"
+  },
+  {
+   "id": "ahorramas-372",
+   "tiendaId": "ahorramas",
+   "nombre": "Patatas al horno al punto de sal lays 150g",
+   "desc": "PATATAS AL HORNO LAYS 150G AL PUNTO DE SAL",
+   "precio": 1.9,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "aperitivos y frutos secos",
+    "patatas fritas",
+    "sabores"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw055cf95a/Assets/0372_C1C1/large/6/d/f/5/6df5f8ffa8822bf8e8f429889fa154922ea312f3_0372_C1C1.jpg?sw=140&sh=140",
+   "marca": "LAYS",
+   "fuente": "https://www.ahorramas.com/patatas-al-horno-al-punto-de-sal-lays-150g-372.html"
+  },
+  {
+   "id": "ahorramas-2078",
+   "tiendaId": "ahorramas",
+   "nombre": "Patata",
+   "desc": "PATATA",
+   "precio": 1.89,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "verduras y hortalizas",
+    "verduras de temporada"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwace45ee3/Assets/02078_C1C1/large/e/7/0/9/e7092b4db2f1d7d544885f464f72e49e14b93e06_02078_C1C1.jpg?sw=140&sh=140",
+   "fuente": "https://www.ahorramas.com/patata-2078.html"
+  },
+  {
+   "id": "ahorramas-15416",
+   "tiendaId": "ahorramas",
+   "nombre": "Crema vichyssoise Knorr 500ml con puerro y patata",
+   "desc": "CREMA VICHYSSOISE KNORR 500ML CON PUERRO Y PATATA",
+   "precio": 2.6,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "caldos, purés y sopas",
+    "cremas y purés"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw3b7177c7/Assets/015416_C1C1/large/9/b/e/7/9be7ce5d61592fb95137443281feab1fa1854fe0_015416_C1C1.jpg?sw=140&sh=140",
+   "marca": "KNORR",
+   "fuente": "https://www.ahorramas.com/crema-vichyssoise-knorr-500ml-con-puerro-y-patata-15416.html"
+  },
+  {
+   "id": "ahorramas-14826",
+   "tiendaId": "ahorramas",
+   "nombre": "Cebolla dulce sabor suave Jumosol 1kg",
+   "desc": "CEBOLLA DULCE 1K",
+   "precio": 2.29,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "verduras y hortalizas",
+    "patatas, ajos y cebollas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw5f803f95/Assets/014826_EIAh/large/8/0/4/a/804abf6c569ec02afc4809905107efb31db43de3_014826_EIAh.jpg?sw=140&sh=140",
+   "marca": "SIN MARCA",
+   "fuente": "https://www.ahorramas.com/cebolla-dulce-sabor-suave-jumosol-1kg-14826.html"
+  },
+  {
+   "id": "ahorramas-17481",
+   "tiendaId": "ahorramas",
+   "nombre": "Cebolla caramelizada Ibsa tarro de cristal 240g",
+   "desc": "CEBOLLA CARAMELIZADA IBSA TARRO DE CRISTAL 240G",
+   "precio": 1.99,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "vegano",
+    "conservas vegetales",
+    "otras verduras"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dweef05719/Assets/017481_C1C1/large/0/8/9/1/0891c11de3b9326039c1bdfc4a0ced6c31ff2082_017481_C1C1.jpg?sw=140&sh=140",
+   "marca": "IBSA",
+   "fuente": "https://www.ahorramas.com/cebolla-caramelizada-ibsa-tarro-de-cristal-240g-17481.html"
+  },
+  {
+   "id": "ahorramas-40311",
+   "tiendaId": "ahorramas",
+   "nombre": "Champú Babaria 700ml cebolla antioxidante sin olor a cebolla",
+   "desc": "CHAMPÚ BABARIA 700ML CEBOLLA ANTIOXIDANTE Y ESTIMULANTE SIN OLOR A CEBOLLA",
+   "precio": 3.65,
+   "emoji": "🧴",
+   "categoria": "higiene",
+   "tags": [
+    "cuidado del cabello",
+    "champú"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwdfb4d6ea/Assets/08410412020626_C1C1/large/d/8/3/e/d83e77d7212b028e976063844f0a6282d115ace3_08410412020626_C1C1.jpg?sw=140&sh=140",
+   "marca": "BABARIA",
+   "fuente": "https://www.ahorramas.com/champu-babaria-700ml-cebolla-antioxidante-sin-olor-a-cebolla-40311.html"
+  },
+  {
+   "id": "ahorramas-65787",
+   "tiendaId": "ahorramas",
+   "nombre": "Lechuga bolsa 2uds",
+   "desc": "LECHUGA 2U",
+   "precio": 1.99,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "verduras y hortalizas",
+    "lechugas y ensaladas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwa2e76188/Assets/065787_C1C1/large/7/8/d/a/78da5bc0167fad3437f0810b59a5bb1296a72df0_065787_C1C1.jpg?sw=140&sh=140",
+   "fuente": "https://www.ahorramas.com/lechuga-bolsa-2uds-65787.html"
+  },
+  {
+   "id": "ahorramas-66263",
+   "tiendaId": "ahorramas",
+   "nombre": "Corazón de lechuga bandeja 6uds",
+   "desc": "CORAZON DE LECHUGA 6U",
+   "precio": 2.59,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "verduras y hortalizas",
+    "lechugas y ensaladas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw6b796260/Assets/066263_C1C1/large/c/4/9/d/c49df895f699b2e02fc7f15221dd610af01c9352_066263_C1C1.jpg?sw=140&sh=140",
+   "fuente": "https://www.ahorramas.com/corazon-de-lechuga-bandeja-6uds-66263.html"
+  },
+  {
+   "id": "ahorramas-70271",
+   "tiendaId": "ahorramas",
+   "nombre": "Lechuga batavia 250gr",
+   "desc": "LECHUGA BATAVIA 250G",
+   "precio": 1.59,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "verduras y hortalizas",
+    "lechugas y ensaladas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwc16f5815/Assets/070271_C1C1/large/e/8/1/0/e810ce9eb365c0ab64f35b9144d97e5d8945e572_070271_C1C1.jpg?sw=140&sh=140",
+   "fuente": "https://www.ahorramas.com/lechuga-batavia-250gr-70271.html"
+  },
+  {
+   "id": "ahorramas-209",
+   "tiendaId": "ahorramas",
+   "nombre": "Caldo en pastillas Avecrem 12u pollo",
+   "desc": "CALDO EN PASTILLAS AVECREM 12U POLLO",
+   "precio": 1.85,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "caldos, purés y sopas",
+    "sopas y caldos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw797733cd/Assets/0209_C1C1/large/c/e/4/6/ce463591e20e3b0f749e68a80d053c2c21d88a6d_0209_C1C1.png?sw=140&sh=140",
+   "marca": "AVECREM",
+   "fuente": "https://www.ahorramas.com/caldo-en-pastillas-avecrem-12u-pollo-209.html"
+  },
+  {
+   "id": "ahorramas-228",
+   "tiendaId": "ahorramas",
+   "nombre": "Sopa Gallina Blanca 71g pollo con fideos finos",
+   "desc": "SOPA GALLINA BLANCA 71G POLLO CON FIDEOS FINOS",
+   "precio": 0.85,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "caldos, purés y sopas",
+    "sopas y caldos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw022375c6/Assets/0228_A1N1/large/5/c/7/6/5c7683b10769db24a983e6b21889afe34685053d_0228_C1C1.jpg?sw=140&sh=140",
+   "marca": "GALLINA BLANCA",
+   "fuente": "https://www.ahorramas.com/sopa-gallina-blanca-71g-pollo-con-fideos-finos-228.html"
+  },
+  {
+   "id": "ahorramas-233",
+   "tiendaId": "ahorramas",
+   "nombre": "Sopa Gallina Blanca 85g pollo con maravilla",
+   "desc": "SOPA GALLINA BLANCA 85G POLLO CON MARAVILLA",
+   "precio": 0.85,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "caldos, purés y sopas",
+    "sopas y caldos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw88afffea/Assets/0233_C1C1/large/f/8/3/9/f839ffa16a9fab5cc4d622122d49fa1daf640c9e_0233_C1C1.jpg?sw=140&sh=140",
+   "marca": "GALLINA BLANCA",
+   "fuente": "https://www.ahorramas.com/sopa-gallina-blanca-85g-pollo-con-maravilla-233.html"
+  },
+  {
+   "id": "ahorramas-1629",
+   "tiendaId": "ahorramas",
+   "nombre": "Repollo",
+   "desc": "REPOLLO",
+   "precio": 1.79,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "verduras y hortalizas",
+    "brócoli, coliflor y repollo"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw7f6165b2/Assets/01629_C1C1/large/d/f/b/e/dfbe6fbc75c2e3589f806655134993ceaf67462f_01629_C1C1.jpg?sw=140&sh=140",
+   "fuente": "https://www.ahorramas.com/repollo-1629.html"
+  },
+  {
+   "id": "ahorramas-10810",
+   "tiendaId": "ahorramas",
+   "nombre": "Preparado de carne picada de pollo 500g",
+   "desc": "CARNE PICADA BURGER MEAT 500G POLLO",
+   "precio": 3.59,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "carnicería",
+    "carne picada y hamburguesas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw20973889/Assets/010810_C1C1/large/9/f/c/7/9fc79fbf37a55b7092dd21ffb7156bbbb93e41ac_010810_C1C1.png?sw=140&sh=140",
+   "fuente": "https://www.ahorramas.com/preparado-de-carne-picada-de-pollo-500g-10810.html"
+  },
+  {
+   "id": "ahorramas-10482",
+   "tiendaId": "ahorramas",
+   "nombre": "Salmonete de roca",
+   "desc": "SALMONETE DE ROCA",
+   "precio": 14.99,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "pescado y mariscos",
+    "salmón y otro pescado azul"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw2dd49436/Assets/010482_C1C1/large/4/f/3/4/4f346105ec8880a8b6dd94ccad9e2f9b8bb1b2d5_010482_C1C1.JPG?sw=140&sh=140",
+   "marca": "SIN MARCA",
+   "fuente": "https://www.ahorramas.com/salmonete-de-roca-10482.html"
+  },
+  {
+   "id": "ahorramas-16985",
+   "tiendaId": "ahorramas",
+   "nombre": "Paté salmón Casa Tarradellas 125g",
+   "desc": "PATÉ CASA TARRADELLAS 125G SALMON",
+   "precio": 1.39,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "charcutería",
+    "patés y sobrasada",
+    "patés en conserva"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw7cc6730c/Assets/016985_C1C1/large/0/6/9/2/0692c18f8efd4331fa3d95dac3042b2f3a1d6f77_016985_C1C1.jpg?sw=140&sh=140",
+   "marca": "CASA TARRADELLAS",
+   "fuente": "https://www.ahorramas.com/pate-salmon-casa-tarradellas-125g-16985.html"
+  },
+  {
+   "id": "ahorramas-17025",
+   "tiendaId": "ahorramas",
+   "nombre": "Pienso gato Ultima esterilizado salmón 1,5kg",
+   "desc": "ALIMENTO SECO PARA GATO ESTERILIZADO ULTIMA 1,5K SALMÓN",
+   "precio": 8.99,
+   "emoji": "🐾",
+   "categoria": "mascotas",
+   "tags": [
+    "gatos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwcb998c28/Assets/017025_EIAh2/large/4/7/a/9/47a9f305c77f645ba2239cc798ee01a92d1a8664_017025_EIAh2.jpg?sw=140&sh=140",
+   "marca": "ULTIMA",
+   "fuente": "https://www.ahorramas.com/pienso-gato-ultima-esterilizado-salmon-15kg-17025.html"
+  },
+  {
+   "id": "ahorramas-332",
+   "tiendaId": "ahorramas",
+   "nombre": "Atún claro Calvo pack-3 en aceite girasol",
+   "desc": "ATÚN CLARO CALVO PACK-3 EN ACEITE GIRASOL",
+   "precio": 3.5,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "conservas de pescado",
+    "atún"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwf692de33/Assets/0332_C1C1/large/c/c/3/1/cc315bbc30dccfc763824a80205586e2f18a009c_0332_C1C1.jpg?sw=140&sh=140",
+   "marca": "CALVO",
+   "fuente": "https://www.ahorramas.com/atun-claro-calvo-pack-3-en-aceite-girasol-332.html"
+  },
+  {
+   "id": "ahorramas-8072",
+   "tiendaId": "ahorramas",
+   "nombre": "Atún claro Calvo pack 3 en escabeche",
+   "desc": "ATUN CLARO CALVO PACK 3 EN ESCABECHE",
+   "precio": 3.5,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "conservas de pescado",
+    "atún"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw3055a741/Assets/08072_C1C1/large/4/5/8/2/4582ecdb9bfa65530bbfba4a697ab0dfa28a93bb_08072_C1C1.jpg?sw=140&sh=140",
+   "marca": "CALVO",
+   "fuente": "https://www.ahorramas.com/atun-claro-calvo-pack-3-en-escabeche-8072.html"
+  },
+  {
+   "id": "ahorramas-9541",
+   "tiendaId": "ahorramas",
+   "nombre": "Atún Ribeira pack 6 en aceite girasol",
+   "desc": "ATUN RIBEIRA PACK 6 EN ACEITE GIRASOL",
+   "precio": 3.75,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "conservas de pescado",
+    "atún"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwc2ed91a0/Assets/09541_C1C1/large/9/9/0/6/9906d38a476346e1eca52b2f58fe3f5d986fc40b_09541_C1C1.jpg?sw=140&sh=140",
+   "marca": "RIBEIRA",
+   "fuente": "https://www.ahorramas.com/atun-ribeira-pack-6-en-aceite-girasol-9541.html"
+  },
+  {
+   "id": "ahorramas-13627",
+   "tiendaId": "ahorramas",
+   "nombre": "Pizza fina Alipende 375g atún",
+   "desc": "PIZZA FINA ALIPENDE 375G ATÚN",
+   "precio": 2.79,
+   "emoji": "🧊",
+   "categoria": "congelados",
+   "tags": [
+    "pizzas y baguettes"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwd6daa435/Assets/013627_C1C1/large/5/2/d/a/52daf909350dadbd5a9c1dc68c307487bb7a7310_013627_C1C1.jpg?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/pizza-fina-alipende-375g-atun-13627.html"
+  },
+  {
+   "id": "ahorramas-231",
+   "tiendaId": "ahorramas",
+   "nombre": "Sopa Gallina Blanca 80g ave con arroz",
+   "desc": "SOPA GALLINA BLANCA 80G AVE CON ARROZ",
+   "precio": 0.85,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "caldos, purés y sopas",
+    "sopas y caldos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw2d3b5fe2/Assets/0231_C1C1/large/a/c/a/5/aca54e0ee7b35d3af6c352592de226e83b2ea244_0231_C1C1.jpg?sw=140&sh=140",
+   "marca": "GALLINA BLANCA",
+   "fuente": "https://www.ahorramas.com/sopa-gallina-blanca-80g-ave-con-arroz-231.html"
+  },
+  {
+   "id": "ahorramas-4416",
+   "tiendaId": "ahorramas",
+   "nombre": "Arroz largo para risotto Scotti 500g",
+   "desc": "ARROZ SCOTTI 500G LARGO PARA RISOTTO",
+   "precio": 1.75,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "arroces, pastas y legumbres",
+    "arroz"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw60a55489/Assets/04416_C1C1/large/8/5/0/c/850c551c9accfae5cd09936e7f69a069030a6651_04416_C1C1.jpg?sw=140&sh=140",
+   "marca": "SCOTTI",
+   "fuente": "https://www.ahorramas.com/arroz-largo-para-risotto-scotti-500g-4416.html"
+  },
+  {
+   "id": "ahorramas-8000",
+   "tiendaId": "ahorramas",
+   "nombre": "Tortitas de arroz integral de yogur con chocolate blanco sin gluten Vitalday 125g",
+   "desc": "TORTITAS DE ARROZ INTEGRAL VITALDAY 125G YOGUR",
+   "precio": 1.9,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "sin gluten",
+    "integral",
+    "productos dietéticos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw16f9f854/Assets/08000_C1C1/large/1/8/2/1/1821b7c9ed7b95307900f2b8522405fb94796d4d_08000_C1C1.jpg?sw=140&sh=140",
+   "marca": "VITALDAY",
+   "fuente": "https://www.ahorramas.com/tortitas-de-arroz-integral-de-yogur-con-chocolate-blanco-sin-gluten-vitalday-125g-8000.html"
+  },
+  {
+   "id": "ahorramas-9492",
+   "tiendaId": "ahorramas",
+   "nombre": "Tortitas de arroz integral Vitalday 115g",
+   "desc": "TORTITAS DE ARROZ INTEGRAL VITALDAY 115G",
+   "precio": 1.15,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "integral",
+    "productos dietéticos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw601a8921/Assets/09492_C1C1/large/1/8/6/4/1864697616a04844a5b4abb9a8530b64904b3dc8_09492_C1C1.jpg?sw=140&sh=140",
+   "marca": "VITALDAY",
+   "fuente": "https://www.ahorramas.com/tortitas-de-arroz-integral-vitalday-115g-9492.html"
+  },
+  {
+   "id": "ahorramas-58",
+   "tiendaId": "ahorramas",
+   "nombre": "Macarrones al huevo Gallo 450g",
+   "desc": "MACCHERONI GALLO 450G AL HUEVO",
+   "precio": 1.75,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "arroces, pastas y legumbres",
+    "pasta"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw2e124d7a/Assets/058_C1C1/large/0/7/6/0/07607d9bc525d6bc52bbb762c86c3f6df303626a_058_C1C1.jpg?sw=140&sh=140",
+   "marca": "GALLO",
+   "fuente": "https://www.ahorramas.com/macarrones-al-huevo-gallo-450g-58.html"
+  },
+  {
+   "id": "ahorramas-2647",
+   "tiendaId": "ahorramas",
+   "nombre": "Macarrones Carretilla 325g carbonara",
+   "desc": "MACARRON CARRETILLA 325G CARBONARA",
+   "precio": 3.25,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "platos preparados",
+    "arroz, pasta, noodles",
+    "platos preparados de pasta"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwa1846797/Assets/02647_C1C1/large/a/7/2/5/a725f84a6e4a97fe788f18972cf9626ac61ecd4e_02647_C1C1.jpg?sw=140&sh=140",
+   "marca": "CARRETILLA",
+   "fuente": "https://www.ahorramas.com/macarrones-carretilla-325g-carbonara-2647.html"
+  },
+  {
+   "id": "ahorramas-2648",
+   "tiendaId": "ahorramas",
+   "nombre": "Macarrones Carretilla 325g boloñesa",
+   "desc": "MACARRON CARRETILLA 325G BOLOÑESA",
+   "precio": 3.25,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "platos preparados",
+    "arroz, pasta, noodles",
+    "platos preparados de pasta"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw476128cd/Assets/02648_C1C1/large/e/5/2/1/e52176890fe4aea1d218b4038353d11684c990e1_02648_C1C1.jpg?sw=140&sh=140",
+   "marca": "CARRETILLA",
+   "fuente": "https://www.ahorramas.com/macarrones-carretilla-325g-bolonesa-2648.html"
+  },
+  {
+   "id": "ahorramas-15908",
+   "tiendaId": "ahorramas",
+   "nombre": "Macarrones Garofalo 500g",
+   "desc": "MACARRONES GAROFALO 500G PENNE ZITI RIGATE",
+   "precio": 1.79,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "arroces, pastas y legumbres",
+    "pasta"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw708176bc/Assets/015908_C1C1/large/f/1/e/1/f1e1d0061e609b342c707b8d7fc9635cc3ebc975_015908_C1C1.jpg?sw=140&sh=140",
+   "marca": "GAROFALO",
+   "fuente": "https://www.ahorramas.com/macarrones-garofalo-500g-15908.html"
+  },
+  {
+   "id": "ahorramas-4403",
+   "tiendaId": "ahorramas",
+   "nombre": "Lentejas de la abuela Litoral 425g",
+   "desc": "LENTEJA LITORAL 425G ESTOFADA",
+   "precio": 1.95,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "arroces, pastas y legumbres",
+    "legumbres"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwb62dae01/Assets/04403_C1C1/large/b/0/d/b/b0db83d30981e98f5a65dadc15a8af0c41aacbb7_04403_C1C1.jpg?sw=140&sh=140",
+   "marca": "LITORAL",
+   "fuente": "https://www.ahorramas.com/lentejas-de-la-abuela-litoral-425g-4403.html"
+  },
+  {
+   "id": "ahorramas-43260",
+   "tiendaId": "ahorramas",
+   "nombre": "Callos con garbanzos Alipende 380g",
+   "desc": "CALLOS ALIPENDE 380G CON GARBANZOS",
+   "precio": 2.6,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "platos preparados",
+    "carne"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw6632b608/Assets/043260_C1C1/large/8/6/b/e/86becbd23419d0c32aaebae1ba5aa3dd302ce391_043260_C1C1.JPG?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/callos-con-garbanzos-alipende-380g-43260.html"
+  },
+  {
+   "id": "ahorramas-45136",
+   "tiendaId": "ahorramas",
+   "nombre": "Lentejas Alipende 430g con chorizo",
+   "desc": "LENTEJA ALIPENDE 430G CON CHORIZO",
+   "precio": 1.35,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "platos preparados",
+    "legumbres",
+    "lentejas cocidas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw031d7c27/Assets/045136_C1C1/large/e/2/d/8/e2d87c3488f17bff9c4d049edcf824c7164ab75a_045136_C1C1.jpg?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/lentejas-alipende-430g-con-chorizo-45136.html"
+  },
+  {
+   "id": "ahorramas-1234",
+   "tiendaId": "ahorramas",
+   "nombre": "Café molido La Estrella mezcla 250g",
+   "desc": "CAFÉ MOLIDO LA ESTRELLA 250G MEZCLA",
+   "precio": 3.5,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "cacao, cafés e infusiones",
+    "cafés"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw8d9d38c4/Assets/01234_C1C1/large/3/6/0/8/36080b65c2756f9e6c07aa24b7cbdabd915f4ac3_01234_C1C1.jpg?sw=140&sh=140",
+   "marca": "LA ESTRELLA",
+   "fuente": "https://www.ahorramas.com/cafe-molido-la-estrella-mezcla-250g-1234.html"
+  },
+  {
+   "id": "ahorramas-3540",
+   "tiendaId": "ahorramas",
+   "nombre": "Café molido descafeinado Marcilla 200g mezcla",
+   "desc": "CAFÉ MOLIDO DESCAFEINADO MARCILLA 200G MEZCLA",
+   "precio": 4.45,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "cacao, cafés e infusiones",
+    "cafés"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw0d6b7ca9/Assets/03540_C1C1/large/9/a/6/b/9a6b0edf68ace798f321587ce504b3dbe6ba6f6e_03540_C1C1.jpg?sw=140&sh=140",
+   "marca": "MARCILLA",
+   "fuente": "https://www.ahorramas.com/cafe-molido-descafeinado-marcilla-200g-mezcla-3540.html"
+  },
+  {
+   "id": "ahorramas-7849",
+   "tiendaId": "ahorramas",
+   "nombre": "Galletas de chocolate Príncipe Lu 300g",
+   "desc": "GALLETAS RELLENAS PRÍNCIPE LU 300G CREMA DE CHOCOLATE",
+   "precio": 2.49,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "galletas, cereales y barritas",
+    "galletas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw61c07c56/Assets/07849_C1C1/large/3/d/e/8/3de82c583911379ed0c158b718ac8de2ce70089f_07849_C1C1.jpg?sw=140&sh=140",
+   "marca": "PRINCIPE",
+   "fuente": "https://www.ahorramas.com/galletas-de-chocolate-principe-lu-300g-7849.html"
+  },
+  {
+   "id": "ahorramas-28312",
+   "tiendaId": "ahorramas",
+   "nombre": "Galletas crackers Gullón 250g quinoa y chía",
+   "desc": "GALLETA CRACKER GULLÓN 250G QUINOA Y CHÍA",
+   "precio": 2.15,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "aperitivos y frutos secos",
+    "galletas saladas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwd3f8d702/Assets/028312_C1C1/large/5/b/8/a/5b8aaa8dc9d16e7d9cda08d0035bf7125b82c4d2_028312_C1C1.jpg?sw=140&sh=140",
+   "marca": "GULLON",
+   "fuente": "https://www.ahorramas.com/galletas-crackers-gullon-250g-quinoa-y-chia-28312.html"
+  },
+  {
+   "id": "ahorramas-33124",
+   "tiendaId": "ahorramas",
+   "nombre": "Galletas saladas Alipende 350g",
+   "desc": "GALLETAS SALADAS ALIPENDE 350G",
+   "precio": 1.2,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "aperitivos y frutos secos",
+    "galletas saladas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw40e61a0e/Assets/033124_C1C1/large/2/0/4/d/204d7c9a4fa2dbc151f6080690806fad210a8741_033124_C1C1.png?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/galletas-saladas-alipende-350g-33124.html"
+  },
+  {
+   "id": "ahorramas-33733",
+   "tiendaId": "ahorramas",
+   "nombre": "Galletas de chocolate con leche Mikado&go Lu 39g",
+   "desc": "GALLETA MIKADO&GO LU 39G CHOCOLATE CON LECHE",
+   "precio": 1.55,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "galletas, cereales y barritas",
+    "galletas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwf877b9f6/Assets/033733_C1C1/large/f/3/f/7/f3f7e8c1597b0ddab7dbbc0658a6de540f90c2da_033733_C1C1.jpg?sw=140&sh=140",
+   "marca": "MIKADO",
+   "fuente": "https://www.ahorramas.com/galletas-de-chocolate-con-leche-mikadogo-lu-39g-33733.html"
+  },
+  {
+   "id": "ahorramas-580",
+   "tiendaId": "ahorramas",
+   "nombre": "Pan molde Schär sin gluten con cereales 300g",
+   "desc": "PAN DE MOLDE SIN GLUTEN SCHÄR 300G CON CEREALES MIJO Y QUINOA",
+   "precio": 3.21,
+   "emoji": "🥖",
+   "categoria": "panaderia",
+   "tags": [
+    "sin gluten",
+    "panadería"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw264f8078/Assets/0580_C1C1/large/2/4/6/6/2466905c73d4545a4ec22f9cb7780a365d61e6a4_0580_C1C1.png?sw=140&sh=140",
+   "marca": "SCHAR",
+   "fuente": "https://www.ahorramas.com/pan-molde-schar-sin-gluten-con-cereales-300g-580.html"
+  },
+  {
+   "id": "ahorramas-3580",
+   "tiendaId": "ahorramas",
+   "nombre": "Cereales chocolate y caramelo Lion nestlé 400g",
+   "desc": "CEREALES LION NESTLE 400G CON CARAMELO Y CHOCOLATE",
+   "precio": 3.69,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "galletas, cereales y barritas",
+    "cereales"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw151405e5/Assets/03580_C1C1/large/8/c/2/9/8c294b9a44f5920870fa67bac6d79b2256fe65ef_03580_C1C1.jpg?sw=140&sh=140",
+   "marca": "LION",
+   "fuente": "https://www.ahorramas.com/cereales-chocolate-y-caramelo-lion-nestle-400g-3580.html"
+  },
+  {
+   "id": "ahorramas-4664",
+   "tiendaId": "ahorramas",
+   "nombre": "Barritas cereales chocolate Corny 6 unidades",
+   "desc": "BARRITAS DE MUESLI CORNY 120G CHOCOLATE CON LECHE",
+   "precio": 3.15,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "galletas, cereales y barritas",
+    "barritas de cereales"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw37bb2317/Assets/04664_C1C1/large/5/4/d/7/54d79636e58698b9e1f11fcf627a66d355ac2523_04664_C1C1.jpg?sw=140&sh=140",
+   "marca": "CORNY",
+   "fuente": "https://www.ahorramas.com/barritas-cereales-chocolate-corny-6-unidades-4664.html"
+  },
+  {
+   "id": "ahorramas-7056",
+   "tiendaId": "ahorramas",
+   "nombre": "Papilla Nestlé 8 cereales galleta desde 6meses 725g",
+   "desc": "ALIMENTO INFANTIL PAPILLA SIN AZÚCAR AÑADIDO NESTLÉ 725G 8 CEREALES CON GALLETA (DESDE 6 MESES)",
+   "precio": 5.75,
+   "emoji": "👶",
+   "categoria": "bebe",
+   "tags": [
+    "alimentación infantil"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwf1e0d75e/Assets/08445290686879_C1C1/large/e/4/0/3/e4038156714f5cd2c1f5af2cdaf5f92ae88c60e2_08445290686879_C1C1.jpg?sw=140&sh=140",
+   "marca": "NESTLE",
+   "fuente": "https://www.ahorramas.com/papilla-nestle-8-cereales-galleta-desde-6meses-725g-7056.html"
+  },
+  {
+   "id": "ahorramas-2967",
+   "tiendaId": "ahorramas",
+   "nombre": "Yogur de oveja Yaranza 140g natural",
+   "desc": "YOGUR DE OVEJA SIN GLUTEN YARANZA 140G NATURAL",
+   "precio": 1.35,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "yogures y kéfir"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwe648b12d/Assets/08435143300014_C1C1/large/e/b/5/d/eb5dfeef973c06c8a1cca8302224a3492948d4a1_08435143300014_C1C1.jpg?sw=140&sh=140",
+   "marca": "YARANZA",
+   "fuente": "https://www.ahorramas.com/yogur-de-oveja-yaranza-140g-natural-2967.html"
+  },
+  {
+   "id": "ahorramas-4631",
+   "tiendaId": "ahorramas",
+   "nombre": "Yogur Danone pack 2 natural",
+   "desc": "YOGUR DANONE PACK 2 NATURAL",
+   "precio": 1.99,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "yogures y kéfir"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwd8f1a08b/Assets/04631_C1C1/large/a/6/8/5/a6853264e031d67be27b4070d464b2d03dc19245_04631_C1C1.jpg?sw=140&sh=140",
+   "marca": "DANONE",
+   "fuente": "https://www.ahorramas.com/yogur-danone-pack-2-natural-4631.html"
+  },
+  {
+   "id": "ahorramas-7722",
+   "tiendaId": "ahorramas",
+   "nombre": "Yogur Danone pack 8 azucarado",
+   "desc": "YOGUR SIN GLUTEN DANONE PACK 8 NATURAL AZUCARADO",
+   "precio": 1.99,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "yogures y kéfir"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwef602f74/Assets/07722_C1C1/large/5/c/5/b/5c5b339b95aed228b26a226a00df58f7685c83a4_07722_C1C1.jpg?sw=140&sh=140",
+   "marca": "DANONE",
+   "fuente": "https://www.ahorramas.com/yogur-danone-pack-8-azucarado-7722.html"
+  },
+  {
+   "id": "ahorramas-1929",
+   "tiendaId": "ahorramas",
+   "nombre": "Queso gorgonzola Igor pieza 200g",
+   "desc": "QUESO GORGONZOLA IGOR 200G PIEZA",
+   "precio": 2.6,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "quesos",
+    "quesos internacionales"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwd7529381/Assets/01929_C1C1/large/3/4/4/0/3440fb0ac4fa315b53ee2ab05005645c9ebb39ef_01929_C1C1.jpg?sw=140&sh=140",
+   "marca": "IGOR",
+   "fuente": "https://www.ahorramas.com/queso-gorgonzola-igor-pieza-200g-1929.html"
+  },
+  {
+   "id": "ahorramas-5330",
+   "tiendaId": "ahorramas",
+   "nombre": "Queso semicurado García Baquero",
+   "desc": "QUESO MEZCLA SEMICURADO GARCIA BAQUERO",
+   "precio": 16.99,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "quesos",
+    "quesos semicurados"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw7aaf6d1c/Assets/05330_C1C1/large/c/5/7/3/c573ecda67d3fc9561edd054833dc7ffd1b0c7ac_05330_C1C1.jpg?sw=140&sh=140",
+   "marca": "GARCIA BAQUERO",
+   "fuente": "https://www.ahorramas.com/queso-semicurado-garcia-baquero-5330.html"
+  },
+  {
+   "id": "ahorramas-7296",
+   "tiendaId": "ahorramas",
+   "nombre": "Materia grasa vegetal Pro-Activ para untar sabor mantequilla",
+   "desc": "MATERIA GRASA VEGETAL PARA UNTAR TARRINA PRO-ACTIV 225G SABOR MANTEQUILLA",
+   "precio": 3.19,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "vegano",
+    "mantequilla, margarina y nata"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw78eddc6f/Assets/07296_C1C1/large/3/4/2/0/3420290b0ed51bfbea9f8a93a1abde953e18c118_07296_C1C1.jpg?sw=140&sh=140",
+   "marca": "PROACTIV",
+   "fuente": "https://www.ahorramas.com/materia-grasa-vegetal-pro-activ-para-untar-sabor-mantequilla-7296.html"
+  },
+  {
+   "id": "ahorramas-8200",
+   "tiendaId": "ahorramas",
+   "nombre": "Croissant de mantequilla 6 uds",
+   "desc": "CROISSANT DE MANTEQUILLA 6U",
+   "precio": 3.3,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "bollería y repostería"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwc2525a44/Assets/08200_C1C1/large/f/5/e/5/f5e5ae1029fee17e7c8b6b8544b17dd55d8e866b_08200_C1C1.jpg?sw=140&sh=140",
+   "fuente": "https://www.ahorramas.com/croissant-de-mantequilla-6-uds-8200.html"
+  },
+  {
+   "id": "ahorramas-27361",
+   "tiendaId": "ahorramas",
+   "nombre": "Mantequilla La Colmenareña 250g rulo",
+   "desc": "MANTEQUILLA RULO LA COLMENAREÑA 250G",
+   "precio": 4.39,
+   "emoji": "🥛",
+   "categoria": "lacteos",
+   "tags": [
+    "mantequilla, margarina y nata"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw8ea0866d/Assets/027361_C1C1/large/f/3/5/1/f35188e9054f344d8e46c33e1240d28daf38dd93_027361_C1C1.jpg?sw=140&sh=140",
+   "marca": "LA COLMENAREÑA",
+   "fuente": "https://www.ahorramas.com/mantequilla-la-colmenarena-250g-rulo-27361.html"
+  },
+  {
+   "id": "ahorramas-419",
+   "tiendaId": "ahorramas",
+   "nombre": "Dulce membrillo sin azucar San Lorenzo 370g",
+   "desc": "DULCE MEMBRILLO SIN AZUCAR SAN LORENZO 370G",
+   "precio": 1.99,
+   "emoji": "🥬",
+   "categoria": "frescos",
+   "tags": [
+    "sin azucar",
+    "conservas de frutas",
+    "membrillo, cabello de ángel y polen"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwdfc685c2/Assets/0419_C1C1/large/0/2/2/9/0229d8a73b9d277262d9313d783de18b480823a4_0419_C1C1.jpg?sw=140&sh=140",
+   "marca": "SAN LORENZO",
+   "fuente": "https://www.ahorramas.com/dulce-membrillo-sin-azucar-san-lorenzo-370g-419.html"
+  },
+  {
+   "id": "ahorramas-533",
+   "tiendaId": "ahorramas",
+   "nombre": "Refresco cola Coca-Cola botella 50cl zero azúcar zero cafeína",
+   "desc": "REFRESCO ZEROZERO SIN AZUCAR AÑADIDO SIN CAFEINA COCA-COLA BOTELLA 50CL DE COLA",
+   "precio": 1.5,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "refrescos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw13f0ce5f/Assets/0533_C1C1/large/4/7/c/1/47c1c3711910ec949c48b41e81dae4616ab7f196_0533_C1C1.jpg?sw=140&sh=140",
+   "marca": "COCA-COLA",
+   "fuente": "https://www.ahorramas.com/refresco-cola-coca-cola-botella-50cl-zero-azucar-zero-cafeina-533.html"
+  },
+  {
+   "id": "ahorramas-2591",
+   "tiendaId": "ahorramas",
+   "nombre": "Caramelos sin azúcar añadido Smint pack 3 menta",
+   "desc": "CARAMELOS SIN AZÚCAR SMINT PACK 3 MENTA",
+   "precio": 3.95,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "sin azucar",
+    "chocolates, golosinas y turrones",
+    "chicles"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw3f3ef2d9/Assets/02591_C1N1/large/0/a/a/5/0aa581c96fcc3c37cd0e12c9e3864b11e6121af5_02591_C1N1.jpg?sw=140&sh=140",
+   "marca": "SMINT",
+   "fuente": "https://www.ahorramas.com/caramelos-sin-azucar-anadido-smint-pack-3-menta-2591.html"
+  },
+  {
+   "id": "ahorramas-7504",
+   "tiendaId": "ahorramas",
+   "nombre": "Palomitas punto de sal microondas s/gluten Popitas pack 3",
+   "desc": "PALOMITAS AL PUNTO DE SAL PARA MICROONDAS SIN GLUTEN POPITAS PACK 3",
+   "precio": 2.19,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "aperitivos y frutos secos",
+    "palomitas"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw7884ae51/Assets/07504_C1C1/large/f/c/c/b/fccbab4811d6b284c5fc5d0bcd604913c020b9c8_07504_C1C1.jpg?sw=140&sh=140",
+   "marca": "POPITAS",
+   "fuente": "https://www.ahorramas.com/palomitas-punto-de-sal-microondas-s-gluten-popitas-pack-3-7504.html"
+  },
+  {
+   "id": "ahorramas-48704",
+   "tiendaId": "ahorramas",
+   "nombre": "Harina de avena Área Proteica 900g chocolate",
+   "desc": "HARINA DE AVENA ÁREA PROTEICA 900G CHOCOLATE",
+   "precio": 3.99,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "galletas, cereales y barritas",
+    "cereales"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw9cd86e1d/Assets/048704_C1C1/large/2/a/c/0/2ac03523a092880f9c3517c0bb7a45f20376280c_048704_C1C1.png?sw=140&sh=140",
+   "marca": "AREA PROTEICA",
+   "fuente": "https://www.ahorramas.com/harina-de-avena-area-proteica-900g-chocolate-48704.html"
+  },
+  {
+   "id": "ahorramas-57879",
+   "tiendaId": "ahorramas",
+   "nombre": "Harina de almorta Ismael Buenache 500g",
+   "desc": "HARINA DE ALMORTA ISMAEL BUENACHE 500G",
+   "precio": 1.5,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "harina, levadura y preparados",
+    "sémola y almorta"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwf8644b8b/Assets/057879_C1C1/large/c/6/4/4/c6446cf6aae240fb2ab30db44c961a888280fd3c_057879_C1C1.jpg?sw=140&sh=140",
+   "marca": "ISMAEL BUENACHE",
+   "fuente": "https://www.ahorramas.com/harina-de-almorta-ismael-buenache-500g-57879.html"
+  },
+  {
+   "id": "ahorramas-63918",
+   "tiendaId": "ahorramas",
+   "nombre": "Harina de maíz sin gluten Alipende 400g fina",
+   "desc": "HARINA DE MAIZ SIN GLUTEN ALIPENDE 400G",
+   "precio": 1.2,
+   "emoji": "🥫",
+   "categoria": "despensa",
+   "tags": [
+    "sin gluten",
+    "harina, levadura y preparados",
+    "harina"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwfb535338/Assets/063918_C1C1/large/5/f/3/1/5f3195d9b71e15439500fa6fbcceb8637d83eff6_063918_C1C1.jpg?sw=140&sh=140",
+   "marca": "ALIPENDE",
+   "fuente": "https://www.ahorramas.com/harina-de-maiz-sin-gluten-alipende-400g-fina-63918.html"
+  },
+  {
+   "id": "ahorramas-3668",
+   "tiendaId": "ahorramas",
+   "nombre": "Papel higiénico Scottex 6 rollos sensitive",
+   "desc": "PAPEL HIGIENICO SCOTTEX 6 UNIDADES SENSITIVE",
+   "precio": 2.99,
+   "emoji": "🧽",
+   "categoria": "limpieza",
+   "tags": [
+    "papel y celulosa",
+    "papel higiénico"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw987df65b/Assets/03668_C1C1/large/e/c/2/a/ec2ad28458f47fdc9049ce0e0fc5e5e55d1e19c2_03668_C1C1.jpg?sw=140&sh=140",
+   "marca": "SCOTTEX",
+   "fuente": "https://www.ahorramas.com/papel-higienico-scottex-6-rollos-sensitive-3668.html"
+  },
+  {
+   "id": "ahorramas-18997",
+   "tiendaId": "ahorramas",
+   "nombre": "Papel higiénico Foxy 4+2 rollos seda con pH neutro para la piel y aroma a talco",
+   "desc": "PAPEL HIGIÉNICO FOXY 4+2 UNIDADES SEDA CON PH NEUTRO PARA LA PIEL Y AROMA A TALCO",
+   "precio": 2.99,
+   "emoji": "🧽",
+   "categoria": "limpieza",
+   "tags": [
+    "papel y celulosa",
+    "papel higiénico"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw0d26cd37/Assets/018997_C1C1/large/f/3/a/d/f3ad50be27474dda8d8c924d9751eca8bbcfe3ac_018997_C1C1.jpg?sw=140&sh=140",
+   "marca": "FOXY",
+   "fuente": "https://www.ahorramas.com/papel-higienico-foxy-42-rollos-seda-con-ph-neutro-para-la-piel-y-aroma-a-talco-18997.html"
+  },
+  {
+   "id": "ahorramas-47868",
+   "tiendaId": "ahorramas",
+   "nombre": "Papel higiénico húmedo Lanta 100 uds infantil",
+   "desc": "PAPEL HIGIÉNICO HÚMEDO LANTA 100 UNIDADES INFANTIL",
+   "precio": 1.99,
+   "emoji": "👶",
+   "categoria": "bebe",
+   "tags": [
+    "papel y celulosa",
+    "toallitas húmedas"
+   ],
+   "popular": true,
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw6fd246f1/Assets/047868_C1C1/large/4/4/a/2/44a2198a459ffeb0d4d34a089d2faf696fb75292_047868_C1C1.jpg?sw=140&sh=140",
+   "marca": "LANTA",
+   "fuente": "https://www.ahorramas.com/papel-higienico-humedo-lanta-100-uds-infantil-47868.html"
+  },
+  {
+   "id": "ahorramas-8785",
+   "tiendaId": "ahorramas",
+   "nombre": "Detergente en polvo para ropa Flota Frescor Max. Eficacia, blancura, Perfume. Bolsa de 15 lavados",
+   "desc": "DETERGENTE POLVO FLOTA 15LAVADOS FRESCOR MAX",
+   "precio": 2.99,
+   "emoji": "🧽",
+   "categoria": "limpieza",
+   "tags": [
+    "detergentes y suavizantes",
+    "detergente en polvo"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwf64dbedb/Assets/08785_C1C1/large/d/3/2/f/d32f852d135551d2c2293740429da18909e7bf4a_08785_C1C1.jpg?sw=140&sh=140",
+   "marca": "FLOTA",
+   "fuente": "https://www.ahorramas.com/detergente-en-polvo-para-ropa-flota-frescor-max.-eficacia-blancura-perfume.-bolsa-de-15-lavados-8785.html"
+  },
+  {
+   "id": "ahorramas-10555",
+   "tiendaId": "ahorramas",
+   "nombre": "Limpiahogar Don Limpio Baño Líquido Detergente 1.5 I",
+   "desc": "LIMPIAHOGAR DON LIMPIO 1,5L BAÑO",
+   "precio": 2.75,
+   "emoji": "🧽",
+   "categoria": "limpieza",
+   "tags": [
+    "limpieza de hogar",
+    "limpiador baño"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwae984445/Assets/08001090501165_C1C1/large/c/b/f/c/cbfc8dd1bfe92e9485dee47881776a59f67eeb69_08001090501165_C1C1.jpg?sw=140&sh=140",
+   "marca": "DON LIMPIO",
+   "fuente": "https://www.ahorramas.com/limpiahogar-don-limpio-bano-liquido-detergente-1.5-i-10555.html"
+  },
+  {
+   "id": "ahorramas-13178",
+   "tiendaId": "ahorramas",
+   "nombre": "Detergente líquido Skip Limpieza Profunda 35+18 lavados 50% GRATIS",
+   "desc": "DETERGENTE LIQUIDO SKIP 35+18L LIMPIEZA PROFUNDA",
+   "precio": 10.75,
+   "emoji": "🧽",
+   "categoria": "limpieza",
+   "tags": [
+    "detergentes y suavizantes",
+    "detergente líquido"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw447ec352/Assets/08720181431357_C1C1/large/7/4/4/6/744644ad0c51e68474d1c6d48fc89aa5d0fab941_08720181431357_C1C1.jpg?sw=140&sh=140",
+   "marca": "SKIP",
+   "fuente": "https://www.ahorramas.com/detergente-liquido-skip-limpieza-profunda-3518-lavados-50-gratis-13178.html"
+  },
+  {
+   "id": "ahorramas-27391",
+   "tiendaId": "ahorramas",
+   "nombre": "Amoniaco muy fuerte Lanta 750ml con detergente",
+   "desc": "AMONIACO MUY FUERTE LANTA 750ML CON DETERGENTE",
+   "precio": 1.25,
+   "emoji": "🧽",
+   "categoria": "limpieza",
+   "tags": [
+    "desinfectantes"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw827032e3/Assets/027391_C1C1/large/8/8/8/2/888202fb9a77510742a9b423409475f2d883bd6f_027391_C1C1.jpg?sw=140&sh=140",
+   "marca": "LANTA",
+   "fuente": "https://www.ahorramas.com/amoniaco-muy-fuerte-lanta-750ml-con-detergente-27391.html"
+  },
+  {
+   "id": "ahorramas-5715",
+   "tiendaId": "ahorramas",
+   "nombre": "Lavavajillas en gel Somat 35 lavados Oro",
+   "desc": "DETERGENTE LAVAVAJILLAS EN GEL SOMAT 35 LAVADOS ORO",
+   "precio": 5.4,
+   "emoji": "🧽",
+   "categoria": "limpieza",
+   "tags": [
+    "lavavajillas",
+    "lavavajillas líquido"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw169a17a8/Assets/08410436320672_C1C1/large/8/6/7/6/86765d01067043f97e36a3b02a4b70cde1d6f7a7_08410436320672_C1C1.jpg?sw=140&sh=140",
+   "marca": "SOMAT",
+   "fuente": "https://www.ahorramas.com/lavavajillas-en-gel-somat-35-lavados-oro-5715.html"
+  },
+  {
+   "id": "ahorramas-11254",
+   "tiendaId": "ahorramas",
+   "nombre": "Sal Lavavajillas Roca 2K",
+   "desc": "SAL LAVAVAJILLAS ROCA 2K",
+   "precio": 0.95,
+   "emoji": "🧽",
+   "categoria": "limpieza",
+   "tags": [
+    "lavavajillas",
+    "limpiamáquinas, sal y otros aditivos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw487a0688/Assets/011254_C1C1/large/9/9/1/a/991a88d5a6182039c1d6a14022d9e9ea66989119_011254_C1C1.jpg?sw=140&sh=140",
+   "marca": "ROCA",
+   "fuente": "https://www.ahorramas.com/sal-lavavajillas-roca-2k-11254.html"
+  },
+  {
+   "id": "ahorramas-43268",
+   "tiendaId": "ahorramas",
+   "nombre": "Lavavajillas Lanta 1,3l",
+   "desc": "LAVAVAJILLAS LANTA 1,3L",
+   "precio": 1.15,
+   "emoji": "🧽",
+   "categoria": "limpieza",
+   "tags": [
+    "lavavajillas",
+    "lavavajillas a mano"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw34280a51/Assets/043268_C1C1/large/e/5/9/d/e59d8b766f807e8f09bbcf549793a9cc4e52a316_043268_C1C1.jpg?sw=140&sh=140",
+   "marca": "LANTA",
+   "fuente": "https://www.ahorramas.com/lavavajillas-lanta-13l-43268.html"
+  },
+  {
+   "id": "ahorramas-1443",
+   "tiendaId": "ahorramas",
+   "nombre": "Champú infantil Johnson's 500ml gotas brillo",
+   "desc": "CHAMPÚ INFANTIL JOHNSON'S 500ML GOTAS DE BRILLO CON ACEITE DE ARGAN",
+   "precio": 4.29,
+   "emoji": "👶",
+   "categoria": "bebe",
+   "tags": [
+    "cuidado del cabello",
+    "champú"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw9be19e47/Assets/01443_Z0ZG/large/c/e/0/5/ce05e39bcd21f0e0404e8b86630abd8c91d9fc76_01443_Z0ZG.jpg?sw=140&sh=140",
+   "marca": "JOHNSONS",
+   "fuente": "https://www.ahorramas.com/champu-infantil-johnsons-500ml-gotas-brillo-1443.html"
+  },
+  {
+   "id": "ahorramas-1944",
+   "tiendaId": "ahorramas",
+   "nombre": "Champú Aceite de Argán de Marruecos OGX Cabellos Secos y Dañados 385 ml",
+   "desc": "CHAMPÚ OGX 385ML ACEITE DE ARGAN DE MARRUECOS",
+   "precio": 7.99,
+   "emoji": "🧴",
+   "categoria": "higiene",
+   "tags": [
+    "cuidado del cabello",
+    "champú"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwfe2732f6/Assets/01944_C1C1/large/b/4/c/3/b4c39c4f2904f9916b7414e4e638c010bf9f200b_01944_C1C1.jpg?sw=140&sh=140",
+   "marca": "OGX",
+   "fuente": "https://www.ahorramas.com/champu-aceite-de-argan-de-marruecos-ogx-cabellos-secos-y-danados-385-ml-1944.html"
+  },
+  {
+   "id": "ahorramas-1958",
+   "tiendaId": "ahorramas",
+   "nombre": "Champú Biotina y Colágeno OGX Cabello Fino,385 ml",
+   "desc": "CHAMPÚ OGX 385ML BIOTINA & COLÁGENO",
+   "precio": 7.99,
+   "emoji": "🧴",
+   "categoria": "higiene",
+   "tags": [
+    "cuidado del cabello",
+    "champú"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwaf0adbad/Assets/01958_A1N1_E/large/7/0/2/4/70247b1d3130d30dcf220d0c372ea5e6572d58f6_01958_A1N1_E.jpg?sw=140&sh=140",
+   "marca": "OGX",
+   "fuente": "https://www.ahorramas.com/champu-biotina-y-colageno-ogx-cabello-fino385-ml-1958.html"
+  },
+  {
+   "id": "ahorramas-16841",
+   "tiendaId": "ahorramas",
+   "nombre": "Champú Fructis Garnier 200ml nº1 Método rizos",
+   "desc": "CHAMPÚ FRUCTIS GARNIER 200ML Nº1 METODO RIZOS",
+   "precio": 4.99,
+   "emoji": "🧴",
+   "categoria": "higiene",
+   "tags": [
+    "cuidado del cabello",
+    "champú"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw3b17d696/Assets/016841_C1C1/large/7/c/a/9/7ca90f2803a4030b99742ced0eccb58bf0b61314_016841_C1C1.JPG?sw=140&sh=140",
+   "marca": "FRUCTIS",
+   "fuente": "https://www.ahorramas.com/champu-fructis-garnier-200ml-n1-metodo-rizos-16841.html"
+  },
+  {
+   "id": "ahorramas-29118",
+   "tiendaId": "ahorramas",
+   "nombre": "Pasta de dientes Colgate Triple Action anticaries y frescor a menta 100ml",
+   "desc": "PASTA DENTAL COLGATE 100ML TRIPLE ACTION",
+   "precio": 1.95,
+   "emoji": "🧴",
+   "categoria": "higiene",
+   "tags": [
+    "higiene bucal",
+    "pasta de dientes"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw43abc547/Assets/029118_C1C1/large/1/5/8/5/1585da895769da28e581fd6ed57090187b085b94_029118_C1C1.jpg?sw=140&sh=140",
+   "marca": "COLGATE",
+   "fuente": "https://www.ahorramas.com/pasta-de-dientes-colgate-triple-action-anticaries-y-frescor-a-menta-100ml-29118.html"
+  },
+  {
+   "id": "ahorramas-30478",
+   "tiendaId": "ahorramas",
+   "nombre": "Pasta de dientes Oral-B 75ml sensibilidad + blanqueador",
+   "desc": "PASTA DENTAL ORAL-B 75ML SENSIBLIDAD + BLANQUEADOR",
+   "precio": 3.49,
+   "emoji": "🧴",
+   "categoria": "higiene",
+   "tags": [
+    "higiene bucal",
+    "pasta de dientes"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw270d4b54/Assets/030478_C1C1/large/a/4/c/4/a4c4d8cfe3bc3eb33288a74fbd3c75133ca0cbaf_030478_C1C1.jpg?sw=140&sh=140",
+   "marca": "ORAL-B",
+   "fuente": "https://www.ahorramas.com/pasta-de-dientes-oral-b-75ml-sensibilidad-blanqueador-30478.html"
+  },
+  {
+   "id": "ahorramas-33735",
+   "tiendaId": "ahorramas",
+   "nombre": "Pasta de dientes Oral-B 75ml complete",
+   "desc": "PASTA DENTAL ORAL-B 75ML COMPLETE",
+   "precio": 2.19,
+   "emoji": "🧴",
+   "categoria": "higiene",
+   "tags": [
+    "higiene bucal",
+    "pasta de dientes"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwced3c01e/Assets/05410076960651_C1C1/large/5/c/a/0/5ca06ddc64f8ac9a0d50d582d5219b669d582534_05410076960651_C1C1.jpg?sw=140&sh=140",
+   "marca": "ORAL-B",
+   "fuente": "https://www.ahorramas.com/pasta-de-dientes-oral-b-75ml-complete-33735.html"
+  },
+  {
+   "id": "ahorramas-46214",
+   "tiendaId": "ahorramas",
+   "nombre": "Pasta de dientes Parodontax 75ml extra fresh",
+   "desc": "PASTA DENTAL PARODONTAX 75ML EXTRA FRESH",
+   "precio": 4.79,
+   "emoji": "🧴",
+   "categoria": "higiene",
+   "tags": [
+    "higiene bucal",
+    "pasta de dientes"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwbcfe6ca1/Assets/046214_C1C1/large/0/2/3/c/023c15a51d5809d56f2d77da2645eaefa4e5e254_046214_C1C1.jpg?sw=140&sh=140",
+   "marca": "PARODONTAX",
+   "fuente": "https://www.ahorramas.com/pasta-de-dientes-parodontax-75ml-extra-fresh-46214.html"
+  },
+  {
+   "id": "ahorramas-51645",
+   "tiendaId": "ahorramas",
+   "nombre": "Pañales bañador Huggies Little Swimmers 7-15kg 20 uds",
+   "desc": "PAÑALES TIPO BAÑADOR LITTLE SWIMMERS HUGGIES 20U TALLA 3-4 (DE 7 A 15KG)",
+   "precio": 11.39,
+   "emoji": "👶",
+   "categoria": "bebe",
+   "tags": [
+    "pañales"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwa4a488e7/Assets/051645_C1CF/large/2/b/f/2/2bf2208249f54474d5591bf7d163c70bd9dccc78_051645_C1CF.jpg?sw=140&sh=140",
+   "marca": "SWIMMERS",
+   "fuente": "https://www.ahorramas.com/panales-banador-huggies-little-swimmers-7-15kg-20-uds-51645.html"
+  },
+  {
+   "id": "ahorramas-51646",
+   "tiendaId": "ahorramas",
+   "nombre": "Pañales bañador Huggies Little Swimmers 12-18kg 19 uds",
+   "desc": "PAÑALES TIPO BAÑADOR LITTLE SWIMMERS HUGGIES 19U TALLA 5-6 (DE 12 A 18KG)",
+   "precio": 11.39,
+   "emoji": "👶",
+   "categoria": "bebe",
+   "tags": [
+    "pañales"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwb9a9ec8f/Assets/051646_C1C1/large/8/e/2/0/8e200f7f6c8c4463a83e6c43324039be025c9d3a_051646_C1C1.jpg?sw=140&sh=140",
+   "marca": "SWIMMERS",
+   "fuente": "https://www.ahorramas.com/panales-banador-huggies-little-swimmers-12-18kg-19-uds-51646.html"
+  },
+  {
+   "id": "ahorramas-2278",
+   "tiendaId": "ahorramas",
+   "nombre": "Cerveza sin alcohol Amstel Oro 0,0 Tostada lata 33cl",
+   "desc": "CERVEZA TOSTADA 0,0% ALCOHOL ORO AMSTEL LATA 33CL",
+   "precio": 0.65,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "cerveza"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwc86251df/Assets/02278_C1C1/large/2/9/1/2/29125978099a406a6d916aa6336648ddee3f7095_02278_C1C1.jpg?sw=140&sh=140",
+   "marca": "AMSTEL",
+   "fuente": "https://www.ahorramas.com/cerveza-sin-alcohol-amstel-oro-00-tostada-lata-33cl-2278.html"
+  },
+  {
+   "id": "ahorramas-2453",
+   "tiendaId": "ahorramas",
+   "nombre": "Cerveza sin alcohol con limón Amstel Radler 0,0% lata 33cl",
+   "desc": "CERVEZA RUBIA 0,0% ALCOHOL RADLER AMSTEL LATA 33CL CON ZUMO DE LIMON NATURAL",
+   "precio": 0.79,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "cerveza"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw5ea605dd/Assets/02453_C1C1/large/f/f/8/9/ff89a80914dfbfae9b6a50d2ab43b17929025192_9e2e1da679283837f8bbca1edfd15fa5d1c6cc82_02453_C1C1.png?sw=140&sh=140",
+   "marca": "AMSTEL",
+   "fuente": "https://www.ahorramas.com/cerveza-sin-alcohol-con-limon-amstel-radler-00-lata-33cl-2453.html"
+  },
+  {
+   "id": "ahorramas-2608",
+   "tiendaId": "ahorramas",
+   "nombre": "Cerveza con limón Amstel Radler lata 33cl",
+   "desc": "CERVEZA RADLER AMSTEL LATA 33CL CON ZUMO NATURAL DE LIMON",
+   "precio": 0.79,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "+18",
+    "cerveza"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dwc0de5197/Assets/02608_C1C1/large/1/e/a/e/1eaef104059b5718b649854d493306a822ba237c_02608_C1C1.png?sw=140&sh=140",
+   "marca": "AMSTEL",
+   "fuente": "https://www.ahorramas.com/cerveza-con-limon-amstel-radler-lata-33cl-2608.html"
+  },
+  {
+   "id": "ahorramas-68",
+   "tiendaId": "ahorramas",
+   "nombre": "Vino tinto DO Rioja Ramon Bilbao crianza",
+   "desc": "VINO TINTO DENOMINACION DE ORIGEN RIOJA RAMON BILBAO 75CL CRIANZA",
+   "precio": 10.3,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "+18",
+    "vinos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw6bfb0483/Assets/068_C1C1/large/e/c/5/e/ec5e030918fea5fb1e21e56c1355b1d693e9de56_068_C1C1.jpg?sw=140&sh=140",
+   "marca": "RAMON BILBAO",
+   "fuente": "https://www.ahorramas.com/vino-tinto-do-rioja-ramon-bilbao-crianza-68.html"
+  },
+  {
+   "id": "ahorramas-1206",
+   "tiendaId": "ahorramas",
+   "nombre": "Vino tinto DO Ribera del Duero Pruno roble",
+   "desc": "VINO TINTO DENOMINACION DE ORIGEN RIBERA DEL DUERO PRUNO 75CL ROBLE",
+   "precio": 12.99,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "+18",
+    "vinos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw3209f4ce/Assets/01206_C1C1/large/e/e/4/c/ee4cb8e4e8a2b83e710927e1137be711d4080c7f_01206_C1C1.jpg?sw=140&sh=140",
+   "marca": "PRUNO",
+   "fuente": "https://www.ahorramas.com/vino-tinto-do-ribera-del-duero-pruno-roble-1206.html"
+  },
+  {
+   "id": "ahorramas-3523",
+   "tiendaId": "ahorramas",
+   "nombre": "Vino tinto DO Toro Bajoz tempranillo",
+   "desc": "VINO TINTO DENOMINACION DE ORIGEN TORO BAJOZ 75CL TEMPRANILLO",
+   "precio": 2.99,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "+18",
+    "vinos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw157b6a5b/Assets/03523_C1C1/large/6/d/a/e/6daedd4c366ced25629e13f6a83865c73ef26e24_03523_C1C1.jpg?sw=140&sh=140",
+   "marca": "BAJOZ",
+   "fuente": "https://www.ahorramas.com/vino-tinto-do-toro-bajoz-tempranillo-3523.html"
+  },
+  {
+   "id": "ahorramas-4129",
+   "tiendaId": "ahorramas",
+   "nombre": "Vino tinto DO Ribera del Duero Melior tempranillo",
+   "desc": "VINO TINTO DENOMINACIÓN DE ORIGEN RIBERA DEL DUERO MELIOR 75CL TEMPRANILLO",
+   "precio": 9.95,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "+18",
+    "vinos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw2129afdb/Assets/04129_C1C1/large/0/3/5/b/035b27b8304cd045cf6f23ed9f9e3ccd7f384b05_04129_C1C1.jpg?sw=140&sh=140",
+   "marca": "MELIOR",
+   "fuente": "https://www.ahorramas.com/vino-tinto-do-ribera-del-duero-melior-tempranillo-4129.html"
+  },
+  {
+   "id": "ahorramas-2850",
+   "tiendaId": "ahorramas",
+   "nombre": "Refresco Sunny delight 1,25l Florida",
+   "desc": "REFRESCO SUNNY DELIGHT 1,25L FLORIDA",
+   "precio": 1.99,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "refrescos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw2b189ebb/Assets/02850_C1C1/large/0/6/9/4/0694d1193ee3dfa6b38fd8c7f988125874f18641_02850_C1C1.jpg?sw=140&sh=140",
+   "marca": "SUNNY DELIGHT",
+   "fuente": "https://www.ahorramas.com/refresco-sunny-delight-125l-florida-2850.html"
+  },
+  {
+   "id": "ahorramas-5671",
+   "tiendaId": "ahorramas",
+   "nombre": "Refresco cola Coca-Cola botella 2l zero azúcar zero sin cafeína",
+   "desc": "REFRESCO ZEROZERO SIN AZUCAR AÑADIDO SIN CAFEINA COCA-COLA BOTELLA 2L DE COLA",
+   "precio": 2.15,
+   "emoji": "🥤",
+   "categoria": "bebidas",
+   "tags": [
+    "refrescos"
+   ],
+   "imagen": "https://www.ahorramas.com/dw/image/v2/BFNH_PRD/on/demandware.static/-/Sites-ahorramas-master/default/dw3e02e6eb/Assets/05671_C1C1/large/2/4/a/3/24a329e58e8e568bc51b9250269029c0846cb36f_05671_C1C1.jpg?sw=140&sh=140",
+   "marca": "COCA-COLA",
+   "fuente": "https://www.ahorramas.com/refresco-cola-coca-cola-botella-2l-zero-azucar-zero-sin-cafeina-5671.html"
   }
  ]
 }

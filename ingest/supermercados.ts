@@ -9,6 +9,9 @@ import type { Categoria, Producto, Tienda } from "../lib/types";
 const UA = "mandader-bot/0.1 (+https://github.com/juancristobalgd1/mandader)";
 const PAUSA_MS = 1000;
 const MAX = Number(process.argv[2] || 600);
+const SOLO_BASICOS = process.argv.includes("--basicos"); // añade básicos al catálogo existente sin rehacerlo
+// Básicos que no pueden faltar en un súper: se buscan por el nombre en la URL de la ficha (máx. 4 de cada)
+const BASICOS = ["leche-.*sin-lactosa", "leche-.*(entera|semidesnatada|desnatada)", "huevos", "barra|pan-de-molde", "aceite-de-oliva", "aceite-de-girasol", "agua-mineral", "platano", "manzana", "naranja", "tomate", "patata", "cebolla", "lechuga", "pechuga|pollo", "carne-picada", "salmon|merluza", "atun", "arroz", "macarrones|espaguetis", "garbanzos|lentejas", "cafe-molido", "galletas", "cereales", "yogur", "queso", "mantequilla", "azucar", "sal-", "harina", "papel-higienico", "detergente", "lavavajillas", "gel-de-ducha|champu", "pasta-de-dientes|dentifrico", "panales", "cerveza", "vino-tinto", "refresco|coca-cola"];
 const dormir = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function get(url: string, intentos = 3): Promise<string | null> {
@@ -51,13 +54,16 @@ const limpiar = (s: string) => s.replace(/<[^>]+>/g, " ").replace(/&nbsp;|&amp;/
 const titulo = (s: string) => { const t = limpiar(s); return t === t.toUpperCase() ? t.charAt(0) + t.slice(1).toLowerCase() : t; };
 
 // ---------- Ahorramas: robots.txt permite las fichas de producto; el aviso legal no prohíbe la extracción ----------
+let YA = new Set<string>();
 async function ahorramas(): Promise<{ tienda: Tienda; productos: Producto[] }> {
   const base = "https://www.ahorramas.com";
   const permitido = await cargarRobots(base, UA);
   const xml = (await get(`${base}/sitemap_0-product.xml`)) || "";
   const urls = Array.from(xml.matchAll(/<loc>([^<]+)<\/loc>/g)).map((m) => m[1]).filter(permitido);
   const paso = Math.max(1, Math.floor(urls.length / MAX));
-  const muestra = urls.filter((_, i) => i % paso === 0).slice(0, MAX);
+  const basicos = BASICOS.flatMap((b) => urls.filter((u) => new RegExp(`/[^/]*(${b})[^/]*$`).test(u)).slice(0, 4));
+  const muestra = Array.from(new Set(SOLO_BASICOS ? basicos : [...basicos, ...urls.filter((_, i) => i % paso === 0).slice(0, MAX)]))
+    .filter((u) => !YA.has(u));
   console.log(`Ahorramas: ${urls.length} fichas permitidas, leo ${muestra.length}`);
   const productos: Producto[] = [];
   for (const [i, url] of muestra.entries()) {
@@ -87,9 +93,13 @@ async function ahorramas(): Promise<{ tienda: Tienda; productos: Producto[] }> {
 }
 
 async function main() {
-  const fuentes = [await ahorramas()];
-  const catalogo = { actualizado: new Date().toISOString(), tiendas: fuentes.map((f) => f.tienda), productos: fuentes.flatMap((f) => f.productos) };
   const destino = path.join(__dirname, "..", "data", "catalog.json");
+  const previo = SOLO_BASICOS ? JSON.parse(fs.readFileSync(destino, "utf8")) : null;
+  if (previo) YA = new Set(previo.productos.map((p: Producto) => p.fuente));
+  const fuentes = [await ahorramas()];
+  const nuevos = fuentes.flatMap((f) => f.productos);
+  const productos = previo ? [...previo.productos, ...nuevos.filter((n) => !previo.productos.some((p: Producto) => p.id === n.id))] : nuevos;
+  const catalogo = { actualizado: new Date().toISOString(), tiendas: fuentes.map((f) => f.tienda), productos };
   if (catalogo.productos.length < 50) throw new Error(`Solo ${catalogo.productos.length} productos: no sobrescribo el catálogo`);
   fs.writeFileSync(destino, JSON.stringify(catalogo, null, 1));
   console.log(`Guardados ${catalogo.productos.length} productos en data/catalog.json`);
