@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Flame, Home, Receipt, Search, UserRound } from "lucide-react";
+import { Home, Receipt, Search, ShoppingBag, UserRound } from "lucide-react";
 const ITEMS = [
   { href: "/", t: "Inicio", I: Home, match: (p: string) => p === "/" },
   { href: "/buscar/", t: "Buscar", I: Search, match: (p: string) => p.startsWith("/buscar") || p.startsWith("/producto") || p.startsWith("/tienda") },
-  { href: "/flechazo/", t: "Flechazo", I: Flame, match: (p: string) => p.startsWith("/flechazo") },
+  { href: "/carrito/", t: "Carrito", I: ShoppingBag, match: (p: string) => p.startsWith("/carrito") },
   { href: "/pedidos/", t: "Pedidos", I: Receipt, match: (p: string) => p.startsWith("/pedido") },
   { href: "/perfil/", t: "Perfil", I: UserRound, match: (p: string) => p.startsWith("/perfil") || p.startsWith("/repartidor") },
 ];

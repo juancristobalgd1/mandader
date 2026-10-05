@@ -6,8 +6,8 @@ import BottomNav from "@/components/BottomNav";
 import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: `${BRAND.name}: lo que quieras, a tu puerta`,
-  description: "Pide comida, súper, farmacia o cualquier mandado y te lo llevamos a casa en Elgoibar, Eibar y alrededores.",
+  title: `${BRAND.name}: tu súper a domicilio`,
+  description: "Haz la compra del súper desde el móvil y te la llevamos a casa en Elgoibar, Eibar y alrededores.",
 };
 export const viewport: Viewport = { themeColor: "#14110f", width: "device-width", initialScale: 1 };
 

@@ -1,4 +1,4 @@
-export type Categoria = "super" | "comida" | "farmacia" | "panaderia" | "fruteria" | "bebidas" | "hogar";
+export type Categoria = "frescos" | "lacteos" | "despensa" | "panaderia" | "bebidas" | "congelados" | "limpieza" | "higiene" | "bebe" | "mascotas";
 export interface Tienda {
   id: string; nombre: string; categoria: Categoria; emoji: string; color: string;
   zona: string; tiempoMin: number; abre: string; cierra: string; valoracion: number;
@@ -6,6 +6,7 @@ export interface Tienda {
 export interface Producto {
   id: string; tiendaId: string; nombre: string; desc: string; precio: number;
   emoji: string; categoria: Categoria; tags: string[]; popular?: boolean;
+  imagen?: string; marca?: string; fuente?: string;
 }
 export interface LineaPedido { id: string; qty: number }
 export type EstadoPedido = "pendiente_pago" | "pagado" | "comprando" | "en_camino" | "entregado" | "cancelado";

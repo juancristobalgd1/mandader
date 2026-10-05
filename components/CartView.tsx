@@ -14,8 +14,8 @@ export default function CartView() {
     <div className="mx-auto max-w-md px-5 py-20 text-center">
       <ShoppingBag size={42} className="mx-auto text-muted" />
       <p className="mt-4 text-xl font-semibold">Tu carrito está vacío</p>
-      <p className="mt-1 text-soft">Busca lo que necesites o prueba el modo flechazo.</p>
-      <div className="mt-6 flex justify-center gap-3"><Link href="/buscar/" className="btn-brand">Buscar</Link><Link href="/flechazo/" className="btn-ghost">Modo flechazo</Link></div>
+      <p className="mt-1 text-soft">Busca lo que necesites o recorre los pasillos.</p>
+      <div className="mt-6 flex justify-center gap-3"><Link href="/buscar/" className="btn-brand">Buscar</Link><Link href="/" className="btn-ghost">Ver pasillos</Link></div>
     </div>
   );
   return (
@@ -28,7 +28,7 @@ export default function CartView() {
             <p className="mb-3 text-sm font-semibold">{ls[0].tienda.emoji} {ls[0].tienda.nombre}</p>
             <div className="space-y-3">{ls.map((l) => (
               <div key={l.id} className="flex items-center gap-3">
-                <Tile emoji={l.producto.emoji} color={l.tienda.color} className="h-14 w-14 shrink-0 rounded-xl" size={28} />
+                <Tile emoji={l.producto.emoji} color={l.tienda.color} imagen={l.producto.imagen} alt={l.producto.nombre} className="h-14 w-14 shrink-0 overflow-hidden rounded-xl" size={28} />
                 <div className="min-w-0 flex-1"><p className="truncate text-sm">{l.producto.nombre}</p><p className="text-xs text-muted">{eur(l.producto.precio)} · {eur(l.importe)}</p></div>
                 <div className="w-28"><AddButton id={l.id} /></div>
               </div>))}</div>

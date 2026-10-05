@@ -23,7 +23,7 @@ export default function SearchView() {
     <div className="mx-auto max-w-7xl px-4 pt-4 md:px-6">
       <form onSubmit={(e) => { e.preventDefault(); ir(q.trim()); }} className="flex items-center gap-2 rounded-2xl border border-line bg-surface p-2 pl-4">
         <Search size={18} className="text-muted" />
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Busca cualquier cosa: pizza, leche, pilas…" className="min-w-0 flex-1 bg-transparent py-2 text-[16px] outline-none placeholder:text-muted" aria-label="Buscar" />
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Busca en el súper: leche, aceite, detergente…" className="min-w-0 flex-1 bg-transparent py-2 text-[16px] outline-none placeholder:text-muted" aria-label="Buscar" />
         {q && <button type="button" onClick={() => { setQ(""); ir(""); }} aria-label="Borrar" className="text-muted"><X size={18} /></button>}
         <button className="btn-brand !py-2">Buscar</button>
       </form>

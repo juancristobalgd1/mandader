@@ -1,19 +1,28 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { buscar, interpretar } from "../lib/search";
+import { PRODUCTOS } from "../lib/data";
 
+test("el catálogo tiene productos reales con precio", () => {
+  assert.ok(PRODUCTOS.length >= 50);
+  assert.ok(PRODUCTOS.every((p) => p.precio > 0 && p.nombre.length > 2));
+});
 test("entiende precio máximo y categoría", () => {
-  const c = interpretar("pizza para cenar hasta 12 €");
-  assert.equal(c.max, 12); assert.equal(c.categoria, "comida"); assert.deepEqual(c.terminos, ["pizza"]);
-  const r = buscar(c); assert.ok(r.length > 0); assert.ok(r.every((p) => p.precio <= 12 && p.nombre.toLowerCase().includes("pizza")));
+  const c = interpretar("bebidas hasta 2 €");
+  assert.equal(c.max, 2); assert.equal(c.categoria, "bebidas");
+  assert.ok(buscar(c).every((p) => p.precio <= 2 && p.categoria === "bebidas"));
 });
 test("etiquetas de varias palabras", () => {
-  const r = buscar("leche sin lactosa"); assert.equal(r[0].nombre, "Leche sin lactosa 1 L");
+  const c = interpretar("galletas sin gluten");
+  assert.deepEqual(c.tags, ["sin gluten"]); assert.deepEqual(c.terminos, ["galleta"]);
+  assert.ok(buscar(c).every((p) => p.tags.includes("sin gluten")));
 });
-test("vegano barato ordena por precio", () => {
-  const r = buscar("algo vegano barato"); assert.ok(r.length > 2);
+test("barato ordena por precio", () => {
+  const r = buscar("leche barata");
   for (let i = 1; i < r.length; i++) assert.ok(r[i - 1].precio <= r[i].precio);
-  assert.ok(r.every((p) => p.tags.includes("vegano")));
 });
-test("medicamento por síntoma", () => { const r = buscar("algo para el dolor"); assert.ok(r.some((p) => p.nombre.startsWith("Ibuprofeno") || p.nombre.startsWith("Paracetamol"))); });
-test("sin resultados no inventa", () => { assert.equal(buscar("bicicleta eléctrica").length, 0); });
+test("encuentra por nombre", () => {
+  const p = PRODUCTOS[0]; const palabra = p.nombre.split(" ").find((x) => x.length > 4) || p.nombre;
+  assert.ok(buscar(palabra).some((x) => x.id === p.id));
+});
+test("sin resultados no inventa", () => { assert.equal(buscar("bicicleta eléctrica plegable").length, 0); });

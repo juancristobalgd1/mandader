@@ -5,5 +5,5 @@ export const BRAND = {
   email: "hola@mandader.com",
   whatsapp: "",
   city: "Elgoibar, Gipuzkoa",
-  tagline: "Desliza, pide y te lo llevamos",
+  tagline: "Tu súper a domicilio",
 };

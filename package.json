@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start -p 3000",
     "api": "tsx --tsconfig tsconfig.json server/index.ts",
-    "test": "tsx --tsconfig tsconfig.json --test tests/*.test.ts"
+    "test": "tsx --tsconfig tsconfig.json --test tests/*.test.ts",
+    "ingest": "tsx --tsconfig tsconfig.json ingest/supermercados.ts"
   },
   "dependencies": {
     "clsx": "2.1.1",
