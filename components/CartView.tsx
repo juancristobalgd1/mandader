@@ -1,4 +1,5 @@
 "use client";
+import { useCatalogo } from "@/lib/catalogo";
 import Link from "next/link";
 import { ShoppingBag, Trash2 } from "lucide-react";
 import { calcular, TARIFA } from "@/lib/pricing";
@@ -8,6 +9,7 @@ import AddButton from "./AddButton";
 import Tile from "./Tile";
 
 export default function CartView() {
+  useCatalogo();
   const { items, clear } = useCart();
   const c = calcular(items);
   if (!c.lineas.length) return (

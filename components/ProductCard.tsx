@@ -1,13 +1,13 @@
 import Link from "next/link";
 import type { Producto } from "@/lib/types";
-import { tienda } from "@/lib/data";
+import { enlaceProducto, tienda } from "@/lib/data";
 import { eur } from "@/lib/format";
 import AddButton from "./AddButton";
 import Tile from "./Tile";
 export default function ProductCard({ p }: { p: Producto }) {
   const t = tienda(p.tiendaId)!;
   return (
-    <Link href={`/producto/${p.id}/`} className="group block overflow-hidden rounded-2xl border border-line bg-surface transition hover:border-neutral-600">
+    <Link href={enlaceProducto(p)} className="group block overflow-hidden rounded-2xl border border-line bg-surface transition hover:border-neutral-600">
       <Tile emoji={p.emoji} color={t.color} imagen={p.imagen} alt={p.nombre} className="aspect-square" />
       <div className="flex items-end justify-between gap-2 p-3">
         <div className="min-w-0">

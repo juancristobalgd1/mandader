@@ -11,7 +11,7 @@ const ITEMS = [
 ];
 export default function BottomNav() {
   const p = usePathname() || "/";
-  if (p.startsWith("/pagar")) return null;
+  if (p.startsWith("/pagar") || p.startsWith("/panel")) return null;
   return (
     <nav className="fixed inset-x-0 bottom-4 z-40 flex justify-center md:hidden" aria-label="Navegación principal">
       <div className="flex items-center gap-1 rounded-full border border-white/10 bg-[#231e1a]/95 p-1.5 shadow-[0_10px_40px_rgba(0,0,0,.6)] backdrop-blur">

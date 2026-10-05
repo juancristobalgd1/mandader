@@ -1,9 +1,11 @@
 "use client";
+import { useCatalogo } from "@/lib/catalogo";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ArrowLeft, CreditCard, Lock } from "lucide-react";
 import { calcular, enZona, ZONAS } from "@/lib/pricing";
+import { BRAND } from "@/lib/brand";
 import { crearPedido, modoDemo } from "@/lib/api";
 import type { Entrega } from "@/lib/types";
 import { eur } from "@/lib/format";
@@ -14,6 +16,7 @@ import { Fila } from "./CartView";
 const VACIA: Entrega = { nombre: "", telefono: "", direccion: "", piso: "", cp: "20870", notas: "", cuando: "ya" };
 
 export default function CheckoutView() {
+  useCatalogo();
   const { items, clear } = useCart();
   const [perfil, setPerfil] = useLocal<Entrega>("mandader:entrega", VACIA);
   const [e, setE] = useState<Entrega>(VACIA);
@@ -48,13 +51,22 @@ export default function CheckoutView() {
         <label className="text-xs text-muted md:col-span-2">Calle y número<input className="input mt-1" value={e.direccion} onChange={set("direccion")} autoComplete="street-address" /></label>
         <label className="text-xs text-muted">Piso, puerta<input className="input mt-1" value={e.piso} onChange={set("piso")} /></label>
         <label className="text-xs text-muted">Código postal
-          <select className="input mt-1" value={e.cp} onChange={set("cp")}>{Object.entries(ZONAS).map(([cp, n]) => <option key={cp} value={cp}>{cp} · {n}</option>)}</select>
+          <input className="input mt-1" value={e.cp} onChange={set("cp")} inputMode="numeric" maxLength={5} autoComplete="postal-code" list="zonas-cp" />
+          <datalist id="zonas-cp">{Object.entries(ZONAS).map(([cp, n]) => <option key={cp} value={cp}>{n}</option>)}</datalist>
+          <span className={`mt-1 block ${zona ? "text-[#3dbb7a]" : "text-[#ffb27a]"}`}>{zona ? `✓ Repartimos en ${zona}` : e.cp.trim().length === 5 ? "Fuera de nuestra zona" : "5 cifras"}</span>
         </label>
         <label className="text-xs text-muted">¿Cuándo?
           <select className="input mt-1" value={e.cuando} onChange={set("cuando")}><option value="ya">Lo antes posible</option><option value="mediodia">Hoy a mediodía (13:00-15:00)</option><option value="tarde">Hoy por la tarde (18:00-20:00)</option><option value="noche">Hoy por la noche (20:00-22:00)</option></select>
         </label>
         <label className="text-xs text-muted md:col-span-2">Notas para el repartidor o mandado libre<textarea className="input mt-1 min-h-20" value={e.notas} onChange={set("notas")} placeholder="Ej.: llamar al timbre 3B. Si no hay leche sin lactosa, trae la normal." /></label>
       </div>
+      {!zona && e.cp.trim().length === 5 && (
+        <div className="panel mt-3 border-[#ffb27a]/40 p-4 text-sm">
+          <p className="font-medium">Todavía no repartimos en {e.cp.trim()}</p>
+          <p className="mt-1 text-soft">Nuestros repartidores llegan a {Object.values(ZONAS).join(", ")}. Para más lejos estamos preparando el envío con una empresa de mensajería; mientras tanto escríbenos y te decimos el precio.</p>
+          <a href={BRAND.whatsapp ? `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hola, quiero un pedido para el ${e.cp.trim()}`)}` : `mailto:${BRAND.email}?subject=${encodeURIComponent(`Pedido para el ${e.cp.trim()}`)}`} className="btn-ghost mt-3 inline-block">{BRAND.whatsapp ? "Escribir por WhatsApp" : "Escribir por email"}</a>
+        </div>
+      )}
       {c.mayorEdad && <label className="mt-3 flex items-start gap-2 text-sm text-soft"><input type="checkbox" checked={edad} onChange={(x) => setEdad(x.target.checked)} className="mt-1" />Tu pedido lleva alcohol: confirmo que soy mayor de 18 y enseñaré el DNI al recibirlo.</label>}
       <div className="panel mt-4 space-y-2 p-4 text-sm">
         <Fila t={`Productos (${c.lineas.reduce((s, l) => s + l.qty, 0)})`} v={eur(c.subtotal)} />

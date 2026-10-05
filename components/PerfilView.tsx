@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Bike, Receipt, Store } from "lucide-react";
+import { Bike, PackagePlus, Receipt, Store } from "lucide-react";
 import { useLocal } from "./useLocal";
 import type { Entrega } from "@/lib/types";
 import { ZONAS } from "@/lib/pricing";
@@ -23,6 +23,7 @@ export default function PerfilView() {
       </div>
       <div className="mt-4 grid gap-3">
         <Link href="/pedidos/" className="panel flex items-center gap-3 p-4"><Receipt size={18} className="text-brand-400" />Mis pedidos</Link>
+        <Link href="/panel/" className="panel flex items-center gap-3 p-4"><PackagePlus size={18} className="text-brand-400" />¿Tienes una tienda? Sube tus productos</Link>
         <Link href="/repartidor/" className="panel flex items-center gap-3 p-4"><Bike size={18} className="text-brand-400" />Panel de repartidor</Link>
         <Link href="/tiendas/" className="panel flex items-center gap-3 p-4"><Store size={18} className="text-brand-400" />Todas las tiendas</Link>
       </div>

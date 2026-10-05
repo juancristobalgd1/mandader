@@ -1,4 +1,5 @@
 "use client";
+import { useCatalogo } from "@/lib/catalogo";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -18,6 +19,7 @@ export const PASOS: { e: EstadoPedido; t: string; d: string; I: typeof Check }[]
 export const ETIQUETA: Record<EstadoPedido, string> = { pendiente_pago: "Pendiente de pago", pagado: "Pagado", comprando: "Comprando", en_camino: "En camino", entregado: "Entregado", cancelado: "Cancelado" };
 
 export default function OrderView() {
+  useCatalogo();
   const id = useSearchParams().get("id") || "";
   const pagoOk = useSearchParams().get("pago") === "ok";
   const [p, setP] = useState<Pedido | null | undefined>(undefined);

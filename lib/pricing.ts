@@ -20,7 +20,7 @@ const r2 = (n: number) => Math.round(n * 100) / 100;
 export function calcular(items: LineaPedido[]) {
   const lineas = items
     .map((i) => ({ ...i, p: producto(i.id) }))
-    .filter((l): l is { id: string; qty: number; p: NonNullable<ReturnType<typeof producto>> } => !!l.p && Number.isInteger(l.qty) && l.qty > 0 && l.qty <= 50)
+    .filter((l): l is { id: string; qty: number; p: NonNullable<ReturnType<typeof producto>> } => !!l.p && !l.p.agotado && Number.isInteger(l.qty) && l.qty > 0 && l.qty <= 50)
     .map((l) => ({ id: l.id, qty: l.qty, producto: l.p, tienda: tienda(l.p.tiendaId)!, importe: r2(l.p.precio * l.qty) }));
   const tiendas = Array.from(new Set(lineas.map((l) => l.tienda.id)));
   const subtotal = r2(lineas.reduce((s, l) => s + l.importe, 0));

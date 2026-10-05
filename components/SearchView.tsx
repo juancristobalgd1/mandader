@@ -3,7 +3,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Search, Sparkles, X } from "lucide-react";
 import { buscar, interpretar } from "@/lib/search";
-import { CATEGORIAS, PRODUCTOS, nombreCategoria } from "@/lib/data";
+import { CATEGORIAS, PRODUCTOS, deTienda, extras, nombreCategoria, tienda } from "@/lib/data";
+import { useCatalogo } from "@/lib/catalogo";
 import type { Categoria } from "@/lib/types";
 import { eur } from "@/lib/format";
 import ProductCard from "./ProductCard";
@@ -13,10 +14,12 @@ export default function SearchView() {
   const r = useRouter();
   const q0 = sp.get("q") || "";
   const cat0 = (sp.get("cat") || "") as Categoria | "";
+  const tienda0 = sp.get("tienda") || "";
+  const v = useCatalogo();
   const [q, setQ] = useState(q0);
   useEffect(() => setQ(q0), [q0]);
   const c = useMemo(() => { const x = interpretar(q0); if (cat0) x.categoria = cat0; return x; }, [q0, cat0]);
-  const res = useMemo(() => (q0 || cat0 ? buscar(c, 120) : PRODUCTOS.filter((p) => p.popular)), [c, q0, cat0]);
+  const res = useMemo(() => (tienda0 ? deTienda(tienda0) : q0 || cat0 ? buscar(c, 120) : [...extras().filter((p) => !p.agotado).slice(0, 20), ...PRODUCTOS.filter((p) => p.popular)]), [c, q0, cat0, tienda0, v]); // eslint-disable-line react-hooks/exhaustive-deps
   const ir = (nq: string, ncat = cat0) => r.push(`/buscar/?${new URLSearchParams({ ...(nq ? { q: nq } : {}), ...(ncat ? { cat: ncat } : {}) })}`);
   const chips = [c.categoria && nombreCategoria(c.categoria), c.max != null && `hasta ${eur(c.max)}`, ...c.tags, c.barato && "más baratos primero", ...c.terminos].filter(Boolean) as string[];
   return (
@@ -32,7 +35,7 @@ export default function SearchView() {
         {CATEGORIAS.map((x) => <button key={x.id} onClick={() => ir(q0, x.id)} className={`chip ${cat0 === x.id ? "pill-active border-transparent font-semibold" : ""}`}>{x.emoji} {x.nombre}</button>)}
       </div>
       {q0 && chips.length > 0 && <p className="mt-4 flex flex-wrap items-center gap-2 text-xs text-soft"><Sparkles size={14} className="text-brand-400" />Entendido: {chips.map((t) => <span key={t} className="rounded-full bg-card px-2 py-0.5 text-white">{t}</span>)}</p>}
-      <p className="mt-4 text-sm text-muted">{q0 || cat0 ? `${res.length} resultados` : "Lo más pedido"}</p>
+      <p className="mt-4 text-sm text-muted">{tienda0 ? `${tienda(tienda0)?.emoji ?? ""} ${tienda(tienda0)?.nombre ?? "Tienda"} · ${res.length} productos` : q0 || cat0 ? `${res.length} resultados` : "Lo más pedido"}</p>
       {res.length === 0 ? (
         <div className="panel mt-4 p-8 text-center"><p className="font-medium">No lo tenemos en el catálogo todavía</p><p className="mt-1 text-sm text-soft">Pídelo igual en las notas del pedido como «mandado libre» y el repartidor lo busca por ti.</p></div>
       ) : (

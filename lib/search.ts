@@ -1,7 +1,8 @@
-import { PRODUCTOS, tienda } from "./data";
+import { todosProductos, tienda } from "./data";
+import { norm } from "./norm";
+export { norm };
 import type { Categoria, Producto } from "./types";
 
-export const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
 // Palabras que apuntan a una categoría
 const CAT: Record<string, Categoria> = {
@@ -51,7 +52,7 @@ function puntuar(p: Producto, c: Consulta) {
 
 export function buscar(q: string | Consulta, limite = 60): Producto[] {
   const c = typeof q === "string" ? interpretar(q) : q;
-  let xs = PRODUCTOS.filter((p) => (!c.categoria || p.categoria === c.categoria || c.terminos.length > 0) && (c.max == null || p.precio <= c.max) && c.tags.every((tg) => p.tags.includes(tg)));
+  let xs = todosProductos().filter((p) => !p.agotado && (!c.categoria || p.categoria === c.categoria || c.terminos.length > 0) && (c.max == null || p.precio <= c.max) && c.tags.every((tg) => p.tags.includes(tg)));
   const puntos = new Map(xs.map((p) => [p.id, puntuar(p, c)]));
   xs = xs.filter((p) => puntos.get(p.id)! >= 0);
   if (c.categoria && c.terminos.length) xs.sort((a, b) => Number(b.categoria === c.categoria) - Number(a.categoria === c.categoria));

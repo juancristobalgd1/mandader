@@ -1,4 +1,5 @@
 "use client";
+import { useCatalogo } from "@/lib/catalogo";
 import { useCallback, useEffect, useState } from "react";
 import { MapPin, Phone, RefreshCw } from "lucide-react";
 import { cambiarEstado, modoDemo, pedidosRepartidor } from "@/lib/api";
@@ -11,6 +12,7 @@ import { ETIQUETA } from "./OrderView";
 const SIGUIENTE: Partial<Record<EstadoPedido, [EstadoPedido, string]>> = { pagado: ["comprando", "Voy a comprar"], comprando: ["en_camino", "Salgo hacia la casa"], en_camino: ["entregado", "Entregado"] };
 
 export default function RiderView() {
+  useCatalogo();
   const [token, setToken] = useLocal<string>("mandader:rider-token", "");
   const [clave, setClave] = useState("");
   const [xs, setXs] = useState<Pedido[]>([]), [err, setErr] = useState(""), [verTodos, setVerTodos] = useState(false);

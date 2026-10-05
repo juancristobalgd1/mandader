@@ -5,7 +5,8 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { calcular, enZona } from "../lib/pricing";
-import type { Entrega, EstadoPedido, LineaPedido, Pedido } from "../lib/types";
+import { CATEGORIAS, emojiCategoria, registrarExtras } from "../lib/data";
+import type { Categoria, Entrega, EstadoPedido, LineaPedido, Pedido, Producto, Tienda } from "../lib/types";
 
 // --- configuración ---
 const envFile = path.join(__dirname, ".env");
@@ -18,11 +19,44 @@ const ORIGENES = (process.env.FRONTEND_ORIGINS || "http://localhost:3000").split
 const TG_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "", TG_CHAT = process.env.TELEGRAM_CHAT_ID || "";
 
 // --- almacén (un fichero JSON; cámbialo por Postgres cuando crezca) ---
-const DB = path.join(__dirname, "data", "pedidos.json");
+const DATA = process.env.MANDADER_DATA_DIR || path.join(__dirname, "data");
+const DB = path.join(DATA, "pedidos.json");
 fs.mkdirSync(path.dirname(DB), { recursive: true });
 let pedidos: Pedido[] = fs.existsSync(DB) ? JSON.parse(fs.readFileSync(DB, "utf8")) : [];
 const guardar = () => { fs.writeFileSync(DB + ".tmp", JSON.stringify(pedidos, null, 1)); fs.renameSync(DB + ".tmp", DB); };
 const buscarPedido = (id: string) => pedidos.find((p) => p.id === id);
+// --- tiendas y sus productos (los suben desde /panel) ---
+const F_TIENDAS = path.join(DATA, "tiendas.json"), F_PROD = path.join(DATA, "productos.json"), IMG = path.join(DATA, "img");
+fs.mkdirSync(IMG, { recursive: true });
+type TiendaPriv = Tienda & { token: string };
+const leerTiendas = (): TiendaPriv[] => (fs.existsSync(F_TIENDAS) ? JSON.parse(fs.readFileSync(F_TIENDAS, "utf8")) : []); // se relee: dar de alta no exige reiniciar
+const publica = ({ token: _t, ...t }: TiendaPriv): Tienda => ({ ...t, local: true });
+let productosT: Producto[] = fs.existsSync(F_PROD) ? JSON.parse(fs.readFileSync(F_PROD, "utf8")) : [];
+const sincronizar = () => registrarExtras(leerTiendas().map(publica), productosT); // así el cobro usa siempre el precio actual
+const guardarProd = () => { fs.writeFileSync(F_PROD + ".tmp", JSON.stringify(productosT, null, 1)); fs.renameSync(F_PROD + ".tmp", F_PROD); sincronizar(); };
+sincronizar();
+const tiendaDe = (req: http.IncomingMessage) => { const a = String(req.headers.authorization || ""); return a.startsWith("Bearer ") ? leerTiendas().find((t) => t.token && t.token === a.slice(7)) : undefined; };
+const PUBLIC_URL = (process.env.API_PUBLIC_URL || "").replace(/\/$/, "");
+function guardarFoto(id: string, data: string, req: http.IncomingMessage) {
+  const m = data.match(/^data:image\/(webp|jpeg|png);base64,([A-Za-z0-9+/=]+)$/); if (!m) throw new Error("Foto no válida");
+  const buf = Buffer.from(m[2], "base64"); if (buf.length > 1_500_000) throw new Error("La foto es demasiado grande");
+  const nombre = `${id}-${Date.now().toString(36)}.${m[1] === "jpeg" ? "jpg" : m[1]}`;
+  fs.writeFileSync(path.join(IMG, nombre), buf);
+  return `${PUBLIC_URL || `https://${req.headers.host}`}/img/${nombre}`;
+}
+function validarProducto(t: TiendaPriv, b: Record<string, unknown>): Producto | string {
+  const s = (v: unknown, max: number) => (typeof v === "string" ? v.trim().slice(0, max) : "");
+  const nombre = s(b.nombre, 120), precio = Math.round(Number(b.precio) * 100) / 100, categoria = s(b.categoria, 20) as Categoria;
+  if (nombre.length < 2) return "Falta el nombre";
+  if (!(precio > 0 && precio < 10000)) return "Precio no válido";
+  if (!CATEGORIAS.some((c) => c.id === categoria)) return "Pasillo no válido";
+  const id = typeof b.id === "string" && b.id.startsWith(`${t.id}-`) && /^[a-z0-9-]{3,80}$/.test(b.id) ? b.id : `${t.id}-${crypto.randomBytes(4).toString("hex")}`;
+  const prev = productosT.find((p) => p.id === id);
+  if (prev && prev.tiendaId !== t.id) return "No es tuyo";
+  const imagen = typeof b.imagen === "string" && /^https?:\/\//.test(b.imagen) ? b.imagen : prev?.imagen;
+  return { id, tiendaId: t.id, nombre, precio, categoria, emoji: emojiCategoria(categoria), desc: s(b.desc, 300), marca: s(b.marca, 60) || undefined, tags: prev?.tags ?? [], agotado: b.agotado === true, imagen, local: true };
+}
+
 function setEstado(p: Pedido, estado: EstadoPedido) { if (p.estado === estado) return; p.estado = estado; p.historial.push({ estado, t: Date.now() }); guardar(); }
 
 // --- utilidades http ---
@@ -77,10 +111,39 @@ const server = http.createServer(async (req, res) => {
   try {
     if (req.method === "GET" && url.pathname === "/api/health") return json(res, 200, { ok: true, stripe: !!STRIPE_KEY, pedidos: pedidos.length });
 
+    // catálogo público de las tiendas dadas de alta
+    if (req.method === "GET" && url.pathname === "/api/catalogo") return json(res, 200, { tiendas: leerTiendas().map(publica), productos: productosT.filter((p) => !p.agotado) });
+    const mImg = url.pathname.match(/^\/img\/([a-z0-9-]+\.(webp|jpg|png))$/);
+    if (req.method === "GET" && mImg) {
+      const f = path.join(IMG, mImg[1]); if (!fs.existsSync(f)) return json(res, 404, { error: "no existe" });
+      res.writeHead(200, { "Content-Type": mImg[2] === "jpg" ? "image/jpeg" : `image/${mImg[2]}`, "Cache-Control": "public, max-age=31536000, immutable" }); return fs.createReadStream(f).pipe(res);
+    }
+    // panel de tienda
+    if (req.method === "POST" && url.pathname === "/api/tienda/entrar") {
+      const { codigo } = JSON.parse(await leerCuerpo(req));
+      const t = leerTiendas().find((x) => x.token && x.token === String(codigo || "").trim());
+      return t ? json(res, 200, { tienda: publica(t) }) : json(res, 401, { error: "código" });
+    }
+    if (url.pathname.startsWith("/api/tienda/")) {
+      const t = tiendaDe(req); if (!t) return json(res, 401, { error: "clave" });
+      if (req.method === "GET" && url.pathname === "/api/tienda/productos") return json(res, 200, productosT.filter((p) => p.tiendaId === t.id));
+      if (req.method === "POST" && url.pathname === "/api/tienda/productos") {
+        const body = JSON.parse(await leerCuerpo(req, 3_000_000));
+        const p = validarProducto(t, body.producto || {}); if (typeof p === "string") return json(res, 400, { error: p });
+        if (typeof body.imagenData === "string" && body.imagenData) p.imagen = guardarFoto(p.id, body.imagenData, req);
+        const i = productosT.findIndex((x) => x.id === p.id);
+        if (i >= 0) productosT[i] = p; else productosT.unshift(p);
+        guardarProd(); return json(res, 200, p);
+      }
+      const mB = url.pathname.match(/^\/api\/tienda\/productos\/([a-z0-9-]+)\/borrar$/);
+      if (req.method === "POST" && mB) { productosT = productosT.filter((p) => !(p.id === mB[1] && p.tiendaId === t.id)); guardarProd(); return json(res, 200, { ok: true }); }
+    }
+
     if (req.method === "POST" && url.pathname === "/api/checkout") {
       if (!STRIPE_KEY) return json(res, 503, { error: "El cobro con tarjeta aún no está configurado" });
       const body = JSON.parse(await leerCuerpo(req));
       const items: LineaPedido[] = Array.isArray(body.items) ? body.items.map((i: LineaPedido) => ({ id: String(i.id), qty: Number(i.qty) })) : [];
+      sincronizar();
       const c = calcular(items); // precios SIEMPRE del catálogo del servidor, nunca del navegador
       if (!c.lineas.length) return json(res, 400, { error: "El carrito está vacío" });
       if (c.faltaMinimo > 0) return json(res, 400, { error: "No llega al pedido mínimo" });

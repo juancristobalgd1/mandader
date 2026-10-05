@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { Clock } from "lucide-react";
 import type { Tienda } from "@/lib/types";
-import { deTienda } from "@/lib/data";
+import { deTienda, enlaceTienda } from "@/lib/data";
 import Tile from "./Tile";
 export default function StoreCard({ t }: { t: Tienda }) {
   return (
-    <Link href={`/tienda/${t.id}/`} className="block w-[230px] shrink-0 snap-start overflow-hidden rounded-2xl border border-line bg-surface transition hover:border-neutral-600">
+    <Link href={enlaceTienda(t)} className="block w-[230px] shrink-0 snap-start overflow-hidden rounded-2xl border border-line bg-surface transition hover:border-neutral-600">
       <Tile emoji={t.emoji} color={t.color} className="h-24" size={42} />
       <div className="p-3">
         <p className="truncate font-medium text-white">{t.nombre}</p>
