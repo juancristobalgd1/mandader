@@ -1,11 +1,11 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Camera, ClipboardList, ImagePlus, LogOut, Plus, Search, Trash2, X } from "lucide-react";
-import { CATEGORIAS, nombreCategoria } from "@/lib/data";
-import type { Categoria, Producto } from "@/lib/types";
+import { CATEGORIAS, PASILLOS, TIPOS, nombreCategoria, tipoDe } from "@/lib/data";
+import type { Categoria, Producto, TipoLocal } from "@/lib/types";
 import { eur } from "@/lib/format";
 import { modoDemo } from "@/lib/api";
-import { adivinarPasillo, leerLista, leerPrecio } from "@/lib/pasillo";
+import { AVISO_MEDICAMENTO, adivinarPasillo, esMedicamento, leerLista, leerPrecio } from "@/lib/pasillo";
 import { refrescarCatalogo } from "@/lib/catalogo";
 import { borrarProducto, crearTiendaDemo, entrar, guardarProducto, misProductos, reducirFoto, salir, sesionGuardada, type Borrador, type Sesion } from "@/lib/tiendaApi";
 import Tile from "./Tile";
@@ -21,13 +21,16 @@ export default function PanelView() {
 }
 
 // ---------- entrar o crear tienda ----------
-const EMOJIS = ["🛒", "🍎", "🥖", "🥩", "🐟", "🧀", "💊", "🍷", "🌸", "🏪"];
+const EMOJIS: Record<TipoLocal, string[]> = {
+  super: ["🛒", "🏬", "🧺"], farmacia: ["💊", "⚕️", "🩹"],
+  restaurante: ["🍔", "🍕", "🥘", "🍣", "🌮", "🥪", "🍗", "☕"], tienda: ["🍎", "🥖", "🥩", "🐟", "🧀", "🍷", "🌸", "🏪"],
+};
 function Entrada({ onOk }: { onOk: (s: Sesion) => void }) {
-  const [codigo, setCodigo] = useState(""), [nombre, setNombre] = useState(""), [emoji, setEmoji] = useState("🛒");
+  const [codigo, setCodigo] = useState(""), [nombre, setNombre] = useState(""), [tipo, setTipo] = useState<TipoLocal>("tienda"), [emoji, setEmoji] = useState("🍎");
   const [err, setErr] = useState(""), [cargando, setCargando] = useState(false);
   const enviar = async (e: React.FormEvent) => {
     e.preventDefault(); setErr("");
-    if (modoDemo) { if (nombre.trim().length < 2) return setErr("Pon el nombre de tu tienda"); return onOk(crearTiendaDemo(nombre, emoji)); }
+    if (modoDemo) { if (nombre.trim().length < 2) return setErr("Pon el nombre de tu tienda"); return onOk(crearTiendaDemo(nombre, emoji, tipo)); }
     setCargando(true);
     try { onOk(await entrar(codigo)); } catch (x) { setErr((x as Error).message); setCargando(false); }
   };
@@ -37,8 +40,10 @@ function Entrada({ onOk }: { onOk: (s: Sesion) => void }) {
       <p className="mt-2 text-soft">Sube tus productos con una foto y un precio. Salen al momento en la app.</p>
       {modoDemo ? (
         <div className="panel mt-6 space-y-4 p-4">
-          <label className="block text-xs text-muted">Nombre de tu tienda<input autoFocus className="input mt-1 !text-base" value={nombre} onChange={(x) => setNombre(x.target.value)} placeholder="Frutería Baserri" /></label>
-          <div><p className="text-xs text-muted">Icono</p><div className="mt-2 flex flex-wrap gap-2">{EMOJIS.map((x) => <button type="button" key={x} onClick={() => setEmoji(x)} className={`grid h-11 w-11 place-items-center rounded-xl border text-xl ${emoji === x ? "border-brand bg-card" : "border-line"}`}>{x}</button>)}</div></div>
+          <div><p className="text-xs text-muted">¿Qué tienes?</p><div className="mt-2 grid grid-cols-2 gap-2">{TIPOS.map((t) => <button type="button" key={t.id} onClick={() => { setTipo(t.id); setEmoji(EMOJIS[t.id][0]); }} className={`rounded-xl border p-3 text-left ${tipo === t.id ? "border-brand bg-card" : "border-line"}`}><span className="text-2xl">{t.emoji}</span><span className="mt-1 block text-sm font-medium">{t.nombre}</span></button>)}</div></div>
+          <label className="block text-xs text-muted">Nombre<input autoFocus className="input mt-1 !text-base" value={nombre} onChange={(x) => setNombre(x.target.value)} placeholder={tipo === "restaurante" ? "Bar Txoko" : tipo === "farmacia" ? "Farmacia Elgoibar" : tipo === "super" ? "Súper Elgoibar" : "Frutería Baserri"} /></label>
+          {tipo === "farmacia" && <p className="rounded-xl bg-card p-3 text-xs text-soft">Solo parafarmacia, higiene y bebé. Los medicamentos no se pueden vender por la app: por ley solo los vende a distancia la web de la propia farmacia.</p>}
+          <div><p className="text-xs text-muted">Icono</p><div className="mt-2 flex flex-wrap gap-2">{EMOJIS[tipo].map((x) => <button type="button" key={x} onClick={() => setEmoji(x)} className={`grid h-11 w-11 place-items-center rounded-xl border text-xl ${emoji === x ? "border-brand bg-card" : "border-line"}`}>{x}</button>)}</div></div>
           <p className="text-xs text-muted">Modo prueba: lo que subas se guarda en este móvil y se ve en la app de este móvil.</p>
         </div>
       ) : (
@@ -54,6 +59,7 @@ function Entrada({ onOk }: { onOk: (s: Sesion) => void }) {
 
 // ---------- gestión de productos ----------
 function Gestion({ s, onSalir }: { s: Sesion; onSalir: () => void }) {
+  const tipo = tipoDe(s.tienda);
   const [productos, setProductos] = useState<Producto[]>([]);
   const [cargando, setCargando] = useState(true), [err, setErr] = useState("");
   const [q, setQ] = useState("");
@@ -95,7 +101,8 @@ function Gestion({ s, onSalir }: { s: Sesion; onSalir: () => void }) {
       {!cargando && productos.length === 0 ? (
         <div className="panel mt-6 p-6 text-center">
           <p className="text-lg font-semibold">Todavía no tienes productos</p>
-          <p className="mt-1 text-sm text-soft">Haz una foto, pon el precio y listo. Si ya tienes una lista en el móvil o en Excel, pégala entera.</p>
+          <p className="mt-1 text-sm text-soft">{tipo === "restaurante" ? "Sube tu carta: foto del plato, precio y listo. Si la tienes en el móvil o en Excel, pégala entera." : "Haz una foto, pon el precio y listo. Si ya tienes una lista en el móvil o en Excel, pégala entera."}</p>
+          {tipo === "farmacia" && <p className="mt-3 text-xs text-muted">Solo parafarmacia, higiene y bebé. Medicamentos no.</p>}
         </div>
       ) : (
         <ul className="mt-4 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-surface">
@@ -110,8 +117,8 @@ function Gestion({ s, onSalir }: { s: Sesion; onSalir: () => void }) {
         </div>
       </div>
       {aviso && <div className="fixed inset-x-3 bottom-24 z-50 mx-auto flex max-w-md items-center justify-between gap-3 rounded-xl bg-white px-4 py-3 text-sm text-black shadow-xl"><span className="truncate">{aviso.texto}</span>{aviso.deshacer && <button onClick={aviso.deshacer} className="shrink-0 font-semibold text-[#c2410c]">Deshacer</button>}</div>}
-      {editando && <Editor p={editando === "nuevo" ? null : editando} color={s.tienda.color} onCerrar={() => setEditando(null)} onGuardar={guardar} onQuitar={(p) => { setEditando(null); quitar(p); }} avisar={avisar} />}
-      {lista && <Lista onCerrar={() => setLista(false)} onAñadir={async (xs) => { for (const x of xs) await guardarProducto(s, x); await tras(); setLista(false); avisar({ texto: `Añadidos ${xs.length} productos` }); }} />}
+      {editando && <Editor p={editando === "nuevo" ? null : editando} tipo={tipo} color={s.tienda.color} onCerrar={() => setEditando(null)} onGuardar={guardar} onQuitar={(p) => { setEditando(null); quitar(p); }} avisar={avisar} />}
+      {lista && <Lista tipo={tipo} onCerrar={() => setLista(false)} onAñadir={async (xs) => { for (const x of xs) await guardarProducto(s, x); await tras(); setLista(false); avisar({ texto: `Añadidos ${xs.length} productos` }); }} />}
     </div>
   );
 }
@@ -137,8 +144,8 @@ function Fila({ p, color, onAbrir, onPrecio, onAgotado, onQuitar }: { p: Product
 }
 
 // ---------- añadir / editar ----------
-function Editor({ p, color, onCerrar, onGuardar, onQuitar, avisar }: { p: Producto | null; color: string; onCerrar: () => void; onGuardar: (b: Borrador, foto?: string) => Promise<Producto>; onQuitar: (p: Producto) => void; avisar: (a: Aviso) => void }) {
-  const vacio = { nombre: "", precio: "", categoria: "despensa" as Categoria, marca: "", desc: "", agotado: false };
+function Editor({ p, tipo, color, onCerrar, onGuardar, onQuitar, avisar }: { p: Producto | null; tipo: TipoLocal; color: string; onCerrar: () => void; onGuardar: (b: Borrador, foto?: string) => Promise<Producto>; onQuitar: (p: Producto) => void; avisar: (a: Aviso) => void }) {
+  const vacio = { nombre: "", precio: "", categoria: PASILLOS[tipo][0] as Categoria, marca: "", desc: "", agotado: false };
   const [f, setF] = useState(p ? { nombre: p.nombre, precio: p.precio.toFixed(2).replace(".", ","), categoria: p.categoria, marca: p.marca ?? "", desc: p.desc ?? "", agotado: !!p.agotado } : vacio);
   const [pasilloTocado, setPasilloTocado] = useState(!!p);
   const [foto, setFoto] = useState<string | undefined>(), [mas, setMas] = useState(!!(p?.marca || p?.desc));
@@ -150,6 +157,7 @@ function Editor({ p, color, onCerrar, onGuardar, onQuitar, avisar }: { p: Produc
     const precio = leerPrecio(f.precio);
     if (f.nombre.trim().length < 2) return setErr("Pon el nombre del producto");
     if (precio == null) return setErr("Pon un precio válido, por ejemplo 1,99");
+    if (esMedicamento(f.nombre)) return setErr(AVISO_MEDICAMENTO);
     setErr(""); setGuardando(true);
     try {
       await onGuardar({ id: p?.id, nombre: f.nombre.trim(), precio, categoria: f.categoria, marca: f.marca.trim(), desc: f.desc.trim(), agotado: f.agotado, imagen: p?.imagen }, foto);
@@ -173,12 +181,12 @@ function Editor({ p, color, onCerrar, onGuardar, onQuitar, avisar }: { p: Produc
           <input ref={camara} type="file" accept="image/*" capture="environment" hidden onChange={(e) => { elegirFoto(e.target.files?.[0]); e.target.value = ""; }} />
           <input ref={galeria} type="file" accept="image/*" hidden onChange={(e) => { elegirFoto(e.target.files?.[0]); e.target.value = ""; }} />
         </div>
-        <label className="mt-4 block text-xs text-muted">Nombre<input ref={nombreRef} autoFocus={nuevo} className="input mt-1 !text-[16px]" value={f.nombre} placeholder="Leche entera Kaiku 1 l" onChange={(e) => setF({ ...f, nombre: e.target.value, categoria: pasilloTocado ? f.categoria : adivinarPasillo(e.target.value) })} /></label>
+        <label className="mt-4 block text-xs text-muted">Nombre<input ref={nombreRef} autoFocus={nuevo} className="input mt-1 !text-[16px]" value={f.nombre} placeholder={tipo === "restaurante" ? "Hamburguesa completa" : tipo === "farmacia" ? "Protector solar SPF 50" : "Leche entera Kaiku 1 l"} onChange={(e) => setF({ ...f, nombre: e.target.value, categoria: pasilloTocado ? f.categoria : adivinarPasillo(e.target.value, tipo) })} /></label>
         <label className="mt-3 block text-xs text-muted">Precio
           <div className="relative mt-1"><input inputMode="decimal" className="input !pr-8 !text-[16px]" value={f.precio} placeholder="1,99" onChange={(e) => setF({ ...f, precio: e.target.value })} onKeyDown={(e) => { if (e.key === "Enter") enviar(nuevo); }} /><span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted">€</span></div>
         </label>
-        <p className="mt-3 text-xs text-muted">Pasillo</p>
-        <div className="mt-2 flex flex-wrap gap-2">{CATEGORIAS.map((c) => <button type="button" key={c.id} onClick={() => { setF({ ...f, categoria: c.id }); setPasilloTocado(true); }} className={`chip !py-2 ${f.categoria === c.id ? "pill-active border-transparent font-semibold" : ""}`}>{c.emoji} {c.nombre}</button>)}</div>
+        <p className="mt-3 text-xs text-muted">{tipo === "restaurante" ? "Sección de la carta" : "Pasillo"}</p>
+        <div className="mt-2 flex flex-wrap gap-2">{CATEGORIAS.filter((c) => PASILLOS[tipo].includes(c.id)).map((c) => <button type="button" key={c.id} onClick={() => { setF({ ...f, categoria: c.id }); setPasilloTocado(true); }} className={`chip !py-2 ${f.categoria === c.id ? "pill-active border-transparent font-semibold" : ""}`}>{c.emoji} {c.nombre}</button>)}</div>
         <label className="mt-4 flex items-center justify-between rounded-xl border border-line px-3 py-2.5 text-sm"><span>Hay existencias</span><input type="checkbox" checked={!f.agotado} onChange={(e) => setF({ ...f, agotado: !e.target.checked })} className="h-5 w-5 accent-[#3dbb7a]" /></label>
         {mas ? (
           <div className="mt-3 space-y-3">
@@ -198,9 +206,9 @@ function Editor({ p, color, onCerrar, onGuardar, onQuitar, avisar }: { p: Produc
 }
 
 // ---------- pegar lista ----------
-function Lista({ onCerrar, onAñadir }: { onCerrar: () => void; onAñadir: (xs: Borrador[]) => Promise<void> }) {
+function Lista({ tipo, onCerrar, onAñadir }: { tipo: TipoLocal; onCerrar: () => void; onAñadir: (xs: Borrador[]) => Promise<void> }) {
   const [texto, setTexto] = useState(""), [enviando, setEnviando] = useState(false), [err, setErr] = useState("");
-  const r = useMemo(() => leerLista(texto), [texto]);
+  const r = useMemo(() => leerLista(texto, tipo), [texto, tipo]);
   const archivo = async (file?: File) => { if (file) setTexto(await file.text()); };
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 md:items-center" onClick={onCerrar}>
@@ -215,6 +223,7 @@ function Lista({ onCerrar, onAñadir }: { onCerrar: () => void; onAñadir: (xs: 
           </ul>
         )}
         {r.malas.length > 0 && <p className="mt-2 text-xs text-[#ffb27a]">{r.malas.length} {r.malas.length === 1 ? "línea sin precio no se añadirá" : "líneas sin precio no se añadirán"}: {r.malas.slice(0, 2).join(" · ")}{r.malas.length > 2 ? "…" : ""}</p>}
+        {r.medicamentos.length > 0 && <p className="mt-2 text-xs text-[#ffb27a]">No se añadirán {r.medicamentos.length} medicamentos ({r.medicamentos.slice(0, 2).join(", ")}): por ley solo se venden en la web de la propia farmacia.</p>}
         {err && <p className="mt-2 text-sm text-[#ff7a7a]">{err}</p>}
         <button disabled={!r.ok.length || enviando} onClick={async () => { setEnviando(true); setErr(""); try { await onAñadir(r.ok); } catch (x) { setErr((x as Error).message); setEnviando(false); } }} className="btn-brand mt-4 w-full py-3.5 text-base">{enviando ? "Añadiendo…" : r.ok.length ? `Añadir ${r.ok.length} productos` : "Pega tu lista arriba"}</button>
         <p className="mt-2 text-center text-xs text-muted">Luego puedes ponerles foto tocando cada uno.</p>

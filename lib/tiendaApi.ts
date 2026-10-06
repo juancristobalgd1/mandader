@@ -1,6 +1,7 @@
 import { API, modoDemo } from "./api";
 import { emojiCategoria } from "./data";
-import type { Categoria, Producto, Tienda } from "./types";
+import type { Categoria, Producto, Tienda, TipoLocal } from "./types";
+import { AVISO_MEDICAMENTO, esMedicamento } from "./pasillo";
 
 export const DEMO_KEY = "mandader:tienda-demo";
 const SES_KEY = "mandader:panel-sesion";
@@ -19,9 +20,9 @@ export const sesionGuardada = (): Sesion | null => { try { return JSON.parse(loc
 export const salir = () => localStorage.removeItem(SES_KEY);
 
 const COLORES = ["#ff8a3d", "#3dbb7a", "#3d8bff", "#e0457b", "#c9a227", "#8a5cf6"];
-export function crearTiendaDemo(nombre: string, emoji: string): Sesion {
+export function crearTiendaDemo(nombre: string, emoji: string, tipo: TipoLocal = "tienda"): Sesion {
   const previa = leerDemo();
-  const tienda: Tienda = { id: `local-${rid()}`, nombre: nombre.trim().slice(0, 60), emoji, color: COLORES[Math.floor(Math.random() * COLORES.length)], categoria: "despensa", zona: "Elgoibar", tiempoMin: 30, abre: "09:00", cierra: "21:00", valoracion: 5, local: true };
+  const tienda: Tienda = { id: `local-${rid()}`, nombre: nombre.trim().slice(0, 60), emoji, color: COLORES[Math.floor(Math.random() * COLORES.length)], categoria: "despensa", tipo, zona: "Elgoibar", tiempoMin: tipo === "restaurante" ? 35 : 30, abre: "09:00", cierra: "21:00", valoracion: 5, local: true };
   guardarDemo({ tienda, productos: previa?.productos.map((p) => ({ ...p, tiendaId: tienda.id })) ?? [] });
   const s = { tienda, token: "demo" }; localStorage.setItem(SES_KEY, JSON.stringify(s)); return s;
 }
@@ -45,6 +46,7 @@ export async function misProductos(s: Sesion): Promise<Producto[]> {
 
 // Crea o actualiza. imagenNueva es una foto recién hecha (data URL ya reducida).
 export async function guardarProducto(s: Sesion, b: Borrador, imagenNueva?: string): Promise<Producto> {
+  if (esMedicamento(b.nombre)) throw new Error(AVISO_MEDICAMENTO);
   if (modoDemo) {
     const d = leerDemo(); if (!d) throw new Error("Crea tu tienda primero");
     const prev = b.id ? d.productos.find((p) => p.id === b.id) : undefined;

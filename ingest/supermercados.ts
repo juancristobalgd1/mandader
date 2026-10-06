@@ -35,7 +35,7 @@ const MAPA: [RegExp, Categoria][] = [
   [/fruta|verdura|carne|pescado|marisco|charcuter|fresco/i, "frescos"], [/alimentaci|despensa|conserva|arroz|pasta|aceite|cacao|caf[eé]|dulce|aperitivo|desayuno|salsa/i, "despensa"],
 ];
 const ALCOHOL = /cerveza|vino|licor|ginebra|whisky|ron |vodka|sidra|cava|vermut|tequila|champ[aá]n/i;
-const EMOJI: Record<Categoria, string> = { frescos: "🥬", lacteos: "🥛", despensa: "🥫", panaderia: "🥖", bebidas: "🥤", congelados: "🧊", limpieza: "🧽", higiene: "🧴", bebe: "👶", mascotas: "🐾" };
+const EMOJI: Partial<Record<Categoria, string>> = { frescos: "🥬", lacteos: "🥛", despensa: "🥫", panaderia: "🥖", bebidas: "🥤", congelados: "🧊", limpieza: "🧽", higiene: "🧴", bebe: "👶", mascotas: "🐾" };
 const POPULARES = /^(leche|huevos|pan |barra|aceite de oliva|agua mineral|pl[aá]tano|tomate|patata|caf[eé] molido|arroz|papel higi[eé]nico|yogur|pollo|manzana)/i;
 
 function etiquetas(nombre: string, migas: string[]) {
@@ -81,7 +81,7 @@ async function ahorramas(): Promise<{ tienda: Tienda; productos: Producto[] }> {
     const nombre = titulo(p.name);
     productos.push({
       id: `ahorramas-${p.sku || i}`, tiendaId: "ahorramas", nombre, desc: limpiar(p.description || nombre).slice(0, 220),
-      precio: Math.round(precio * 100) / 100, emoji: EMOJI[cat], categoria: cat, tags: etiquetas(nombre, migas),
+      precio: Math.round(precio * 100) / 100, emoji: EMOJI[cat] ?? "🛒", categoria: cat, tags: etiquetas(nombre, migas),
       popular: POPULARES.test(nombre) || undefined, imagen: img, marca: p.brand?.name, fuente: url,
     });
     if (i % 50 === 0) console.log(`  ${i}/${muestra.length} · ${productos.length} válidos`);

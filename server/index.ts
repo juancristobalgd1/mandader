@@ -5,7 +5,8 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { calcular, enZona } from "../lib/pricing";
-import { CATEGORIAS, emojiCategoria, registrarExtras } from "../lib/data";
+import { CATEGORIAS, PASILLOS, emojiCategoria, registrarExtras, tipoDe } from "../lib/data";
+import { AVISO_MEDICAMENTO, esMedicamento } from "../lib/pasillo";
 import type { Categoria, Entrega, EstadoPedido, LineaPedido, Pedido, Producto, Tienda } from "../lib/types";
 
 // --- configuración ---
@@ -49,7 +50,8 @@ function validarProducto(t: TiendaPriv, b: Record<string, unknown>): Producto | 
   const nombre = s(b.nombre, 120), precio = Math.round(Number(b.precio) * 100) / 100, categoria = s(b.categoria, 20) as Categoria;
   if (nombre.length < 2) return "Falta el nombre";
   if (!(precio > 0 && precio < 10000)) return "Precio no válido";
-  if (!CATEGORIAS.some((c) => c.id === categoria)) return "Pasillo no válido";
+  if (!CATEGORIAS.some((c) => c.id === categoria) || !PASILLOS[tipoDe(t)].includes(categoria)) return "Pasillo no válido";
+  if (esMedicamento(nombre)) return AVISO_MEDICAMENTO;
   const id = typeof b.id === "string" && b.id.startsWith(`${t.id}-`) && /^[a-z0-9-]{3,80}$/.test(b.id) ? b.id : `${t.id}-${crypto.randomBytes(4).toString("hex")}`;
   const prev = productosT.find((p) => p.id === id);
   if (prev && prev.tiendaId !== t.id) return "No es tuyo";

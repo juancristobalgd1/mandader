@@ -1,5 +1,5 @@
 import catalog from "../data/catalog.json";
-import type { Categoria, Producto, Tienda } from "./types";
+import type { Categoria, Producto, Tienda, TipoLocal } from "./types";
 
 // Catálogo fijo (el que se genera al publicar la web)
 export const TIENDAS = catalog.tiendas as Tienda[];
@@ -36,6 +36,27 @@ export const CATEGORIAS: { id: Categoria; nombre: string; emoji: string }[] = [
   { id: "higiene", nombre: "Higiene", emoji: "🧴" },
   { id: "bebe", nombre: "Bebé", emoji: "👶" },
   { id: "mascotas", nombre: "Mascotas", emoji: "🐾" },
+  { id: "salud", nombre: "Parafarmacia y salud", emoji: "🩹" },
+  { id: "platos", nombre: "Platos y menús", emoji: "🍽️" },
+  { id: "postres", nombre: "Postres", emoji: "🍰" },
 ];
+
+// Tipos de local (secciones de la portada) y los pasillos que tiene cada uno
+export const TIPOS: { id: TipoLocal; nombre: string; corto: string; emoji: string; desc: string }[] = [
+  { id: "super", nombre: "Súper y mercados", corto: "Súper", emoji: "🛒", desc: "La compra de la semana" },
+  { id: "restaurante", nombre: "Restaurantes", corto: "Comida", emoji: "🍔", desc: "Comida hecha, caliente a casa" },
+  { id: "farmacia", nombre: "Farmacia", corto: "Farmacia", emoji: "💊", desc: "Parafarmacia, bebé e higiene" },
+  { id: "tienda", nombre: "Tiendas del pueblo", corto: "Tiendas", emoji: "🏪", desc: "Frutería, carnicería, panadería…" },
+];
+export const PASILLOS: Record<TipoLocal, Categoria[]> = {
+  super: ["frescos", "lacteos", "despensa", "panaderia", "bebidas", "congelados", "limpieza", "higiene", "bebe", "mascotas"],
+  farmacia: ["salud", "higiene", "bebe"],
+  restaurante: ["platos", "postres", "bebidas"],
+  tienda: ["frescos", "panaderia", "lacteos", "despensa", "bebidas", "limpieza", "higiene", "mascotas"],
+};
+export const tipoDe = (t?: Tienda) => t?.tipo ?? "super";
+export const nombreTipo = (x: TipoLocal) => TIPOS.find((t) => t.id === x)?.nombre ?? x;
+export const tiendasDeTipo = (x: TipoLocal) => todasTiendas().filter((t) => tipoDe(t) === x);
+export const deTipo = (x: TipoLocal, ps: Producto[]) => ps.filter((p) => tipoDe(tienda(p.tiendaId)) === x);
 export const nombreCategoria = (c: Categoria) => CATEGORIAS.find((x) => x.id === c)?.nombre ?? c;
 export const emojiCategoria = (c: Categoria) => CATEGORIAS.find((x) => x.id === c)?.emoji ?? "🛒";

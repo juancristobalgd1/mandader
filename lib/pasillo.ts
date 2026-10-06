@@ -1,4 +1,4 @@
-import type { Categoria } from "./types";
+import type { Categoria, TipoLocal } from "./types";
 import { norm } from "./norm";
 
 // Palabras que delatan el pasillo. La primera que aparezca gana; si no, «despensa».
@@ -13,11 +13,24 @@ const REGLAS: [Categoria, string[]][] = [
   ["panaderia", ["pan", "barra", "baguette", "croissant", "magdalena", "bollo", "napolitana", "rosquilla", "donut", "bizcocho", "tostada", "chapata", "hogaza", "talo"]],
   ["frescos", ["manzana", "platano", "naranja", "pera", "uva", "fresa", "melon", "sandia", "kiwi", "limon", "mandarina", "tomate", "lechuga", "patata", "cebolla", "ajo", "pimiento", "zanahoria", "calabacin", "berenjena", "pepino", "puerro", "fruta", "verdura", "pollo", "pechuga", "ternera", "cerdo", "carne", "chuleta", "lomo", "filete", "hamburguesa", "salchicha", "chorizo", "jamon", "pescado", "merluza", "salmon", "bacalao", "gamba", "mejillon", "chipiron", "txistorra", "morcilla", "embutido", "fiambre"]],
 ];
-export function adivinarPasillo(nombre: string): Categoria {
+const POSTRES = ["tarta", "helado", "flan", "natillas", "brownie", "coulant", "tiramisu", "arroz con leche", "cuajada", "goxua", "pantxineta", "postre", "mousse", "cheesecake", "gofre", "crepe"];
+const BEBIDAS = REGLAS.find(([c]) => c === "bebidas")![1];
+const tiene = (n: string, ps: string[]) => ps.some((p) => n.includes(` ${p}`));
+
+// El pasillo depende del tipo de local: en un restaurante todo es plato salvo postres y bebidas.
+export function adivinarPasillo(nombre: string, tipo: TipoLocal = "super"): Categoria {
   const n = ` ${norm(nombre)} `;
-  for (const [cat, palabras] of REGLAS) if (palabras.some((p) => n.includes(` ${p}`))) return cat;
+  if (tipo === "restaurante") return tiene(n, POSTRES) ? "postres" : tiene(n, BEBIDAS) ? "bebidas" : "platos";
+  if (tipo === "farmacia") { for (const c of ["bebe", "higiene"] as Categoria[]) if (tiene(n, REGLAS.find(([x]) => x === c)![1])) return c; return "salud"; }
+  for (const [cat, palabras] of REGLAS) if (tiene(n, palabras)) return cat;
   return "despensa";
 }
+
+// Medicamentos: en España solo los vende a distancia la web de la propia farmacia (RD 870/2013).
+// En mandader no se aceptan; las farmacias suben parafarmacia, higiene y bebé.
+const MEDICAMENTOS = ["medicamento", "antibiotico", "con receta", "ibuprofeno", "paracetamol", "aspirina", "acido acetilsalicilico", "gelocatil", "frenadol", "dalsy", "enantyum", "nolotil", "metamizol", "dexketoprofeno", "naproxeno", "diclofenaco", "voltaren", "omeprazol", "almax", "amoxicilina", "loratadina", "cetirizina", "ebastina", "bisolvon", "mucosan", "fluimucil", "couldina", "espidifen", "termalgin", "efferalgan", "lorazepam", "diazepam", "orfidal", "sildenafilo", "tadalafilo", "viagra", "anticonceptiv", "pildora del dia", "jarabe para la tos"];
+export const esMedicamento = (nombre: string) => tiene(` ${norm(nombre)} `, MEDICAMENTOS);
+export const AVISO_MEDICAMENTO = "Los medicamentos no se pueden vender por la app: por ley solo los vende a distancia la web de la propia farmacia. Sube parafarmacia, higiene o bebé.";
 
 // "1,29", "1.29 €", "2€" -> número; null si no es un precio válido
 export function leerPrecio(s: string): number | null {
@@ -28,8 +41,8 @@ export function leerPrecio(s: string): number | null {
 }
 
 // Lista pegada (WhatsApp, Excel, CSV): una línea por producto, el precio al final.
-export function leerLista(texto: string): { ok: { nombre: string; precio: number; categoria: Categoria }[]; malas: string[] } {
-  const ok: { nombre: string; precio: number; categoria: Categoria }[] = [], malas: string[] = [];
+export function leerLista(texto: string, tipo: TipoLocal = "super"): { ok: { nombre: string; precio: number; categoria: Categoria }[]; malas: string[]; medicamentos: string[] } {
+  const ok: { nombre: string; precio: number; categoria: Categoria }[] = [], malas: string[] = [], medicamentos: string[] = [];
   for (const bruta of texto.split(/\r?\n/)) {
     const linea = bruta.trim().replace(/^[-•*·]\s*/, "");
     if (!linea) continue;
@@ -39,7 +52,8 @@ export function leerLista(texto: string): { ok: { nombre: string; precio: number
     else { const m = linea.match(/(\d{1,4}(?:[.,]\d{1,2})?)\s*(?:€|eur|euros)?\s*$/i); if (m) { precio = leerPrecio(m[1]); nombre = linea.slice(0, m.index).trim(); } }
     nombre = nombre.replace(/[\s,:=\-–]+$/, "").replace(/^"|"$/g, "").trim();
     if (precio == null || nombre.length < 2) { malas.push(linea); continue; }
-    ok.push({ nombre: nombre.charAt(0).toUpperCase() + nombre.slice(1), precio, categoria: adivinarPasillo(nombre) });
+    if (esMedicamento(nombre)) { medicamentos.push(nombre); continue; }
+    ok.push({ nombre: nombre.charAt(0).toUpperCase() + nombre.slice(1), precio, categoria: adivinarPasillo(nombre, tipo) });
   }
-  return { ok, malas };
+  return { ok, malas, medicamentos };
 }
