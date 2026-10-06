@@ -28,7 +28,7 @@ export default function SearchView() {
     return tipo0 ? deTipo(tipo0, base).slice(0, 120) : base;
   }, [c, q0, cat0, tienda0, tipo0, v]); // eslint-disable-line react-hooks/exhaustive-deps
   const locales = tipo0 && !tienda0 ? tiendasDeTipo(tipo0) : [];
-  const pasillos = CATEGORIAS.filter((x) => PASILLOS[tipo0 || "super"].includes(x.id) || (!tipo0 && x.id === "salud"));
+  const pasillos = CATEGORIAS.filter((x) => PASILLOS[tipo0 || "super"].includes(x.id));
   const ir = (nq: string, ncat = cat0, ntipo = tipo0) => r.push(`/buscar/?${new URLSearchParams({ ...(ntipo ? { tipo: ntipo } : {}), ...(nq ? { q: nq } : {}), ...(ncat ? { cat: ncat } : {}) })}`);
   const tipoInfo = TIPOS.find((t) => t.id === tipo0);
   const chips = [c.categoria && nombreCategoria(c.categoria), c.max != null && `hasta ${eur(c.max)}`, ...c.tags, c.barato && "más baratos primero", ...c.terminos].filter(Boolean) as string[];
@@ -36,7 +36,7 @@ export default function SearchView() {
     <div className="mx-auto max-w-7xl px-4 pt-4 md:px-6">
       <form onSubmit={(e) => { e.preventDefault(); ir(q.trim()); }} className="flex items-center gap-2 rounded-2xl border border-line bg-surface p-2 pl-4">
         <Search size={18} className="text-muted" />
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={tipo0 === "restaurante" ? "¿Qué te apetece? pizza, hamburguesa…" : tipo0 === "farmacia" ? "Protector solar, pañales, champú…" : "Busca lo que quieras: leche, pizza, pañales…"} className="min-w-0 flex-1 bg-transparent py-2 text-[16px] outline-none placeholder:text-muted" aria-label="Buscar" />
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={tipo0 === "restaurante" ? "¿Qué te apetece? pizza, hamburguesa…" : "Busca lo que quieras: leche, pizza, pañales…"} className="min-w-0 flex-1 bg-transparent py-2 text-[16px] outline-none placeholder:text-muted" aria-label="Buscar" />
         {q && <button type="button" onClick={() => { setQ(""); ir(""); }} aria-label="Borrar" className="text-muted"><X size={18} /></button>}
         <button className="btn-brand !py-2">Buscar</button>
       </form>
@@ -52,7 +52,7 @@ export default function SearchView() {
       {q0 && chips.length > 0 && <p className="mt-4 flex flex-wrap items-center gap-2 text-xs text-soft"><Sparkles size={14} className="text-brand-400" />Entendido: {chips.map((t) => <span key={t} className="rounded-full bg-card px-2 py-0.5 text-white">{t}</span>)}</p>}
       <p className="mt-4 text-sm text-muted">{tienda0 ? `${tienda(tienda0)?.emoji ?? ""} ${tienda(tienda0)?.nombre ?? "Tienda"} · ${res.length} productos` : q0 || cat0 ? `${res.length} resultados` : tipoInfo ? `${tipoInfo.nombre} · ${locales.length} ${locales.length === 1 ? "local" : "locales"}` : "Lo más pedido"}</p>
       {q0 && esMedicamento(q0) ? (
-        <div className="panel mt-4 p-8 text-center"><p className="font-medium">Los medicamentos no se venden por la app</p><p className="mt-1 text-sm text-soft">Por ley solo los vende a distancia la web de la propia farmacia. Aquí encontrarás parafarmacia, higiene y bebé.</p></div>
+        <div className="panel mt-4 p-8 text-center"><p className="font-medium">Los medicamentos no se venden por la app</p><p className="mt-1 text-sm text-soft">Por ley solo los vende a distancia la web de la propia farmacia.</p></div>
       ) : res.length === 0 ? (
         tipoInfo && !locales.length
           ? <div className="panel mt-4 p-8 text-center"><p className="text-3xl">{tipoInfo.emoji}</p><p className="mt-2 font-medium">Pronto: {tipoInfo.nombre.toLowerCase()} en tu zona</p><p className="mt-1 text-sm text-soft">Estamos sumando locales. ¿Tienes uno? Súbelo gratis desde el <a href="/mandader/panel/" className="text-brand-400 underline">panel de tienda</a>.</p></div>

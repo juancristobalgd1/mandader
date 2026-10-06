@@ -1,6 +1,6 @@
-export type Categoria = "frescos" | "lacteos" | "despensa" | "panaderia" | "bebidas" | "congelados" | "limpieza" | "higiene" | "bebe" | "mascotas" | "salud" | "platos" | "postres";
+export type Categoria = "frescos" | "lacteos" | "despensa" | "panaderia" | "bebidas" | "congelados" | "limpieza" | "higiene" | "bebe" | "mascotas" | "platos" | "postres";
 // Tipo de local, como las secciones de Glovo
-export type TipoLocal = "super" | "farmacia" | "restaurante" | "tienda";
+export type TipoLocal = "super" | "restaurante" | "tienda";
 export interface Tienda {
   id: string; nombre: string; categoria: Categoria; emoji: string; color: string;
   zona: string; tiempoMin: number; abre: string; cierra: string; valoracion: number;

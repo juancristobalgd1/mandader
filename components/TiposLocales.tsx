@@ -7,7 +7,7 @@ import { useCatalogo } from "@/lib/catalogo";
 export default function TiposLocales() {
   useCatalogo();
   return (
-    <section className="grid grid-cols-2 gap-3 md:grid-cols-4">
+    <section className="grid gap-3 md:grid-cols-3">
       {TIPOS.map((t) => { const n = tiendasDeTipo(t.id).length; return (
         <Link key={t.id} href={`/buscar/?tipo=${t.id}`} className="panel flex items-center gap-3 p-4 transition hover:border-neutral-600">
           <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-card text-3xl">{t.emoji}</span>

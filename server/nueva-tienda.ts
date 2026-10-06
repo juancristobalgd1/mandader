@@ -6,8 +6,8 @@ import path from "node:path";
 const DATA = process.env.MANDADER_DATA_DIR || path.join(__dirname, "data");
 const F = path.join(DATA, "tiendas.json");
 const [nombre, emoji = "🛒", zona = "Elgoibar", tipo = "tienda"] = process.argv.slice(2);
-const TIPOS = ["super", "farmacia", "restaurante", "tienda"];
-if (!nombre || !TIPOS.includes(tipo)) { console.error('Uso: npm run tienda -- "Nombre de la tienda" [emoji] [pueblo] [super|farmacia|restaurante|tienda]'); process.exit(1); }
+const TIPOS = ["super", "restaurante", "tienda"];
+if (!nombre || !TIPOS.includes(tipo)) { console.error('Uso: npm run tienda -- "Nombre de la tienda" [emoji] [pueblo] [super|restaurante|tienda]'); process.exit(1); }
 fs.mkdirSync(DATA, { recursive: true });
 const tiendas = fs.existsSync(F) ? JSON.parse(fs.readFileSync(F, "utf8")) : [];
 const base = nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 30) || "tienda";

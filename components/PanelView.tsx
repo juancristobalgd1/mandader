@@ -22,7 +22,7 @@ export default function PanelView() {
 
 // ---------- entrar o crear tienda ----------
 const EMOJIS: Record<TipoLocal, string[]> = {
-  super: ["🛒", "🏬", "🧺"], farmacia: ["💊", "⚕️", "🩹"],
+  super: ["🛒", "🏬", "🧺"],
   restaurante: ["🍔", "🍕", "🥘", "🍣", "🌮", "🥪", "🍗", "☕"], tienda: ["🍎", "🥖", "🥩", "🐟", "🧀", "🍷", "🌸", "🏪"],
 };
 function Entrada({ onOk }: { onOk: (s: Sesion) => void }) {
@@ -40,9 +40,8 @@ function Entrada({ onOk }: { onOk: (s: Sesion) => void }) {
       <p className="mt-2 text-soft">Sube tus productos con una foto y un precio. Salen al momento en la app.</p>
       {modoDemo ? (
         <div className="panel mt-6 space-y-4 p-4">
-          <div><p className="text-xs text-muted">¿Qué tienes?</p><div className="mt-2 grid grid-cols-2 gap-2">{TIPOS.map((t) => <button type="button" key={t.id} onClick={() => { setTipo(t.id); setEmoji(EMOJIS[t.id][0]); }} className={`rounded-xl border p-3 text-left ${tipo === t.id ? "border-brand bg-card" : "border-line"}`}><span className="text-2xl">{t.emoji}</span><span className="mt-1 block text-sm font-medium">{t.nombre}</span></button>)}</div></div>
-          <label className="block text-xs text-muted">Nombre<input autoFocus className="input mt-1 !text-base" value={nombre} onChange={(x) => setNombre(x.target.value)} placeholder={tipo === "restaurante" ? "Bar Txoko" : tipo === "farmacia" ? "Farmacia Elgoibar" : tipo === "super" ? "Súper Elgoibar" : "Frutería Baserri"} /></label>
-          {tipo === "farmacia" && <p className="rounded-xl bg-card p-3 text-xs text-soft">Solo parafarmacia, higiene y bebé. Los medicamentos no se pueden vender por la app: por ley solo los vende a distancia la web de la propia farmacia.</p>}
+          <div><p className="text-xs text-muted">¿Qué tienes?</p><div className="mt-2 grid grid-cols-3 gap-2">{TIPOS.map((t) => <button type="button" key={t.id} onClick={() => { setTipo(t.id); setEmoji(EMOJIS[t.id][0]); }} className={`rounded-xl border p-3 text-left ${tipo === t.id ? "border-brand bg-card" : "border-line"}`}><span className="text-2xl">{t.emoji}</span><span className="mt-1 block text-sm font-medium">{t.nombre}</span></button>)}</div></div>
+          <label className="block text-xs text-muted">Nombre<input autoFocus className="input mt-1 !text-base" value={nombre} onChange={(x) => setNombre(x.target.value)} placeholder={tipo === "restaurante" ? "Bar Txoko" : tipo === "super" ? "Súper Elgoibar" : "Frutería Baserri"} /></label>
           <div><p className="text-xs text-muted">Icono</p><div className="mt-2 flex flex-wrap gap-2">{EMOJIS[tipo].map((x) => <button type="button" key={x} onClick={() => setEmoji(x)} className={`grid h-11 w-11 place-items-center rounded-xl border text-xl ${emoji === x ? "border-brand bg-card" : "border-line"}`}>{x}</button>)}</div></div>
           <p className="text-xs text-muted">Modo prueba: lo que subas se guarda en este móvil y se ve en la app de este móvil.</p>
         </div>
@@ -102,7 +101,6 @@ function Gestion({ s, onSalir }: { s: Sesion; onSalir: () => void }) {
         <div className="panel mt-6 p-6 text-center">
           <p className="text-lg font-semibold">Todavía no tienes productos</p>
           <p className="mt-1 text-sm text-soft">{tipo === "restaurante" ? "Sube tu carta: foto del plato, precio y listo. Si la tienes en el móvil o en Excel, pégala entera." : "Haz una foto, pon el precio y listo. Si ya tienes una lista en el móvil o en Excel, pégala entera."}</p>
-          {tipo === "farmacia" && <p className="mt-3 text-xs text-muted">Solo parafarmacia, higiene y bebé. Medicamentos no.</p>}
         </div>
       ) : (
         <ul className="mt-4 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-surface">
@@ -181,7 +179,7 @@ function Editor({ p, tipo, color, onCerrar, onGuardar, onQuitar, avisar }: { p: 
           <input ref={camara} type="file" accept="image/*" capture="environment" hidden onChange={(e) => { elegirFoto(e.target.files?.[0]); e.target.value = ""; }} />
           <input ref={galeria} type="file" accept="image/*" hidden onChange={(e) => { elegirFoto(e.target.files?.[0]); e.target.value = ""; }} />
         </div>
-        <label className="mt-4 block text-xs text-muted">Nombre<input ref={nombreRef} autoFocus={nuevo} className="input mt-1 !text-[16px]" value={f.nombre} placeholder={tipo === "restaurante" ? "Hamburguesa completa" : tipo === "farmacia" ? "Protector solar SPF 50" : "Leche entera Kaiku 1 l"} onChange={(e) => setF({ ...f, nombre: e.target.value, categoria: pasilloTocado ? f.categoria : adivinarPasillo(e.target.value, tipo) })} /></label>
+        <label className="mt-4 block text-xs text-muted">Nombre<input ref={nombreRef} autoFocus={nuevo} className="input mt-1 !text-[16px]" value={f.nombre} placeholder={tipo === "restaurante" ? "Hamburguesa completa" : "Leche entera Kaiku 1 l"} onChange={(e) => setF({ ...f, nombre: e.target.value, categoria: pasilloTocado ? f.categoria : adivinarPasillo(e.target.value, tipo) })} /></label>
         <label className="mt-3 block text-xs text-muted">Precio
           <div className="relative mt-1"><input inputMode="decimal" className="input !pr-8 !text-[16px]" value={f.precio} placeholder="1,99" onChange={(e) => setF({ ...f, precio: e.target.value })} onKeyDown={(e) => { if (e.key === "Enter") enviar(nuevo); }} /><span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted">€</span></div>
         </label>

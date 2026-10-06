@@ -21,16 +21,15 @@ const tiene = (n: string, ps: string[]) => ps.some((p) => n.includes(` ${p}`));
 export function adivinarPasillo(nombre: string, tipo: TipoLocal = "super"): Categoria {
   const n = ` ${norm(nombre)} `;
   if (tipo === "restaurante") return tiene(n, POSTRES) ? "postres" : tiene(n, BEBIDAS) ? "bebidas" : "platos";
-  if (tipo === "farmacia") { for (const c of ["bebe", "higiene"] as Categoria[]) if (tiene(n, REGLAS.find(([x]) => x === c)![1])) return c; return "salud"; }
   for (const [cat, palabras] of REGLAS) if (tiene(n, palabras)) return cat;
   return "despensa";
 }
 
 // Medicamentos: en España solo los vende a distancia la web de la propia farmacia (RD 870/2013).
-// En mandader no se aceptan; las farmacias suben parafarmacia, higiene y bebé.
+// En mandader no se aceptan.
 const MEDICAMENTOS = ["medicamento", "antibiotico", "con receta", "ibuprofeno", "paracetamol", "aspirina", "acido acetilsalicilico", "gelocatil", "frenadol", "dalsy", "enantyum", "nolotil", "metamizol", "dexketoprofeno", "naproxeno", "diclofenaco", "voltaren", "omeprazol", "almax", "amoxicilina", "loratadina", "cetirizina", "ebastina", "bisolvon", "mucosan", "fluimucil", "couldina", "espidifen", "termalgin", "efferalgan", "lorazepam", "diazepam", "orfidal", "sildenafilo", "tadalafilo", "viagra", "anticonceptiv", "pildora del dia", "jarabe para la tos"];
 export const esMedicamento = (nombre: string) => tiene(` ${norm(nombre)} `, MEDICAMENTOS);
-export const AVISO_MEDICAMENTO = "Los medicamentos no se pueden vender por la app: por ley solo los vende a distancia la web de la propia farmacia. Sube parafarmacia, higiene o bebé.";
+export const AVISO_MEDICAMENTO = "Los medicamentos no se pueden vender por la app: por ley solo los vende a distancia la web de la propia farmacia.";
 
 // "1,29", "1.29 €", "2€" -> número; null si no es un precio válido
 export function leerPrecio(s: string): number | null {

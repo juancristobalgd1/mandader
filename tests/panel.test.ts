@@ -45,24 +45,21 @@ test("el pasillo depende del tipo de local", () => {
   assert.equal(adivinarPasillo("Hamburguesa completa", "restaurante"), "platos");
   assert.equal(adivinarPasillo("Tarta de queso", "restaurante"), "postres");
   assert.equal(adivinarPasillo("Coca-Cola lata", "restaurante"), "bebidas");
-  assert.equal(adivinarPasillo("Protector solar SPF 50", "farmacia"), "salud");
-  assert.equal(adivinarPasillo("Pañales talla 4", "farmacia"), "bebe");
-  assert.equal(adivinarPasillo("Champú anticaspa", "farmacia"), "higiene");
 });
 test("los medicamentos no entran", () => {
   assert.ok(esMedicamento("Ibuprofeno 600 mg 40 comprimidos"));
   assert.ok(esMedicamento("Frenadol complex"));
   assert.ok(!esMedicamento("Protector solar SPF 50"));
   assert.ok(!esMedicamento("Jarabe de arce"));
-  const r = leerLista("Paracetamol 1g 2,50\nTiritas 3,10", "farmacia");
+  const r = leerLista("Paracetamol 1g 2,50\nTiritas 3,10");
   assert.deepEqual(r.ok.map((x) => x.nombre), ["Tiritas"]); assert.equal(r.medicamentos.length, 1);
 });
 test("filtra por tipo de local", () => {
-  const f: Tienda = { id: "farm-x", nombre: "Farmacia X", categoria: "salud", tipo: "farmacia", emoji: "💊", color: "#3dbb7a", zona: "Elgoibar", tiempoMin: 20, abre: "09:00", cierra: "20:00", valoracion: 5 };
-  const p: Producto = { id: "farm-x-1", tiendaId: "farm-x", nombre: "Tiritas", desc: "", precio: 3.1, emoji: "🩹", categoria: "salud", tags: [] };
+  const f: Tienda = { id: "rest-x", nombre: "Bar X", categoria: "platos", tipo: "restaurante", emoji: "🍔", color: "#3dbb7a", zona: "Elgoibar", tiempoMin: 20, abre: "09:00", cierra: "20:00", valoracion: 5 };
+  const p: Producto = { id: "rest-x-1", tiendaId: "rest-x", nombre: "Pintxo de tortilla", desc: "", precio: 3.1, emoji: "🍽️", categoria: "platos", tags: [] };
   registrarExtras([f], [p]);
-  assert.equal(tipoDe(f), "farmacia"); assert.equal(tipoDe({ ...f, tipo: undefined }), "super");
-  assert.deepEqual(deTipo("farmacia", [p]).map((x) => x.id), ["farm-x-1"]);
+  assert.equal(tipoDe(f), "restaurante"); assert.equal(tipoDe({ ...f, tipo: undefined }), "super");
+  assert.deepEqual(deTipo("restaurante", [p]).map((x) => x.id), ["rest-x-1"]);
   assert.equal(deTipo("super", [p]).length, 0);
   registrarExtras([], []);
 });

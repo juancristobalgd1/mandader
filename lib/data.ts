@@ -36,7 +36,6 @@ export const CATEGORIAS: { id: Categoria; nombre: string; emoji: string }[] = [
   { id: "higiene", nombre: "Higiene", emoji: "🧴" },
   { id: "bebe", nombre: "Bebé", emoji: "👶" },
   { id: "mascotas", nombre: "Mascotas", emoji: "🐾" },
-  { id: "salud", nombre: "Parafarmacia y salud", emoji: "🩹" },
   { id: "platos", nombre: "Platos y menús", emoji: "🍽️" },
   { id: "postres", nombre: "Postres", emoji: "🍰" },
 ];
@@ -45,12 +44,10 @@ export const CATEGORIAS: { id: Categoria; nombre: string; emoji: string }[] = [
 export const TIPOS: { id: TipoLocal; nombre: string; corto: string; emoji: string; desc: string }[] = [
   { id: "super", nombre: "Súper y mercados", corto: "Súper", emoji: "🛒", desc: "La compra de la semana" },
   { id: "restaurante", nombre: "Restaurantes", corto: "Comida", emoji: "🍔", desc: "Comida hecha, caliente a casa" },
-  { id: "farmacia", nombre: "Farmacia", corto: "Farmacia", emoji: "💊", desc: "Parafarmacia, bebé e higiene" },
   { id: "tienda", nombre: "Tiendas del pueblo", corto: "Tiendas", emoji: "🏪", desc: "Frutería, carnicería, panadería…" },
 ];
 export const PASILLOS: Record<TipoLocal, Categoria[]> = {
   super: ["frescos", "lacteos", "despensa", "panaderia", "bebidas", "congelados", "limpieza", "higiene", "bebe", "mascotas"],
-  farmacia: ["salud", "higiene", "bebe"],
   restaurante: ["platos", "postres", "bebidas"],
   tienda: ["frescos", "panaderia", "lacteos", "despensa", "bebidas", "limpieza", "higiene", "mascotas"],
 };
